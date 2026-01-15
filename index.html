@@ -8,10 +8,6 @@
   <!-- Tipografía -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Calendar Appointment Scheduling -->
-  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-
   <style>
     body {
       margin: 0;
@@ -24,7 +20,7 @@
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 40px 24px; /* más aire lateral */
+      padding: 40px 24px;
     }
 
     /* Logo */
@@ -58,7 +54,6 @@
       margin-top: 40px;
       margin-bottom: 12px;
       text-align: center;
-      color: #3F3F3F;
       font-weight: 700;
     }
 
@@ -87,16 +82,26 @@
 
     ul {
       padding-left: 20px;
-      text-align: left;
     }
 
     li {
       margin-bottom: 10px;
     }
 
-    .calendar-button-wrapper {
-      margin-top: 24px;
-      text-align: center;
+    /* Botón calendario */
+    .calendar-link {
+      display: inline-block;
+      padding: 14px 26px;
+      background-color: #A79B8E;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .calendar-link:hover {
+      background-color: #95897d;
     }
 
     .calendar-note {
@@ -108,21 +113,58 @@
 
     /* Botón WhatsApp */
     .whatsapp-button {
-      display: block;
-      margin: 30px auto 0;
       padding: 14px 26px;
       background-color: #7DAA92;
       color: #ffffff;
       text-decoration: none;
       border-radius: 8px;
       font-size: 1rem;
-      text-align: center;
-      max-width: 280px;
       font-weight: 700;
+      text-align: center;
+      min-width: 220px;
     }
 
     .whatsapp-button:hover {
       background-color: #6a9a82;
+    }
+
+    /* Botón Instagram */
+    .instagram-button {
+      padding: 14px 26px;
+      background-color: #6B4F3F;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      min-width: 220px;
+    }
+
+    .instagram-button:hover {
+      background-color: #5a4133;
+    }
+
+/* Animación scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+    /* Acciones finales */
+    .final-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .quote {
@@ -133,48 +175,11 @@
       font-size: 0.95rem;
     }
 
-    .instagram-link {
-  margin-top: 26px;
-  text-align: center;
-}
-
-.instagram-link p {
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-  color: #3F3F3F;
-}
-
-.instagram-link a {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #6B4F3F;
-  text-decoration: none;
-}
-
-.instagram-link a:hover {
-  text-decoration: underline;
-}
-
     footer {
       margin-top: 20px;
       font-size: 0.9rem;
       color: #5A5A5A;
       text-align: center;
-      
-      .calendar-link {
-  display: inline-block;
-  padding: 14px 26px;
-  background-color: #A79B8E;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.calendar-link:hover {
-  background-color: #95897d;
-}
     }
   </style>
 </head>
@@ -186,14 +191,14 @@
     <img src="img/logo.png" alt="Logo Alimentación Inteligente" class="logo">
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero fade-up">
       <h1>Alimentación Inteligente🍒</h1>
       <p>Nutrición sin culpa, con acompañamiento real.</p>
     </section>
 
     <!-- FOTO + QUIÉN SOY -->
     <section>
-      <img src="img/arely.jpg" alt="Arely, nutrióloga" class="profile-photo">
+      <img src="img/arely.jpg" alt="Arely, nutrióloga" class="profile-photo fade-up">
       <h2>Hola, soy Arely🦦</h2>
       <p>
         Me gusta visitar cafeterías con mi perrita o simplemente ir a trabajar
@@ -205,20 +210,20 @@
       </p>
     </section>
 
-    <!-- CÓMO ES LA CONSULTA -->
-    <section class="card">
+    <!-- CONSULTA -->
+    <section class="card fade-up">
       <h2>Modalidad en línea o presencial</h2>
       <ul>
         <li>Historia clínica</li>
         <li>Plan de alimentación personalizado (PDF + App)</li>
         <li>Análisis de composición corporal (InBody)</li>
-        <li>Atención por WhatsApp durante el proceso</li>
+        <li>Acompañamiento por WhatsApp</li>
       </ul>
     </section>
 
-    <!-- PARA QUIÉN ES -->
+    <!-- PARA QUIÉN -->
     <section>
-      <h2>Este lugar es para tí, si…</h2>
+      <h2>Este lugar es para ti si…</h2>
       <ul>
         <li>Te cansaste de empezar y abandonar dietas</li>
         <li>Quieres mejorar tu relación con la comida</li>
@@ -227,52 +232,73 @@
       </ul>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- CTA -->
     <section class="card">
       <h2>📲 Agenda tu consulta</h2>
       <p>
-        Puedes reservar tu fecha y hora con anticipación.
+        Reserva tu fecha y hora con anticipación.
         Tu espacio se confirma una vez realizado el anticipo.
       </p>
 
-      <div class="calendar-button-wrapper">
-  <a
-    href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true"
-    target="_blank"
-    rel="noopener"
-    class="calendar-link"
-  >
-    Ver disponibilidad
-  </a>
+      <div style="text-align:center; margin-top:20px;">
+        <a
+          href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true"
+          target="_blank"
+          rel="noopener"
+          class="calendar-link"
+        >
+          Ver disponibilidad
+        </a>
 
-      <p class="calendar-note">
-        Al dar clic se abrirá el calendario de Google en una nueva ventana.
-      </p>
+        <p class="calendar-note">
+          Se abrirá el calendario de Google en una nueva ventana.
+        </p>
+      </div>
     </section>
 
-    <!-- Link WA -->
-    <a href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
-       target="_blank"
-       class="whatsapp-button">
-      Envíame mensaje por WhatsApp
-    </a>
+    <!-- BOTONES FINALES -->
+    <div class="final-actions">
+      <a
+        href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
+        target="_blank"
+        class="whatsapp-button"
+      >
+        WhatsApp 💬
+      </a>
 
-    <!-- FRASE MOTIVADORA -->
-    <p class="quote">
-      “Sin culpa y sin modas, que tu alimentación sea inteligente y sostenible.”
-    </p>
-
-    <!-- INSTAGRAM -->
-    <div class="instagram-link">
-      <a href="https://www.instagram.com/nutri.arelydelacruz?igsh=ZXI3bmNwMDU5ZDZo" target="_blank">
-        Haz clic aquí para ver en Instagram ✨
+      <a
+        href="https://www.instagram.com/nutri.arelydelacruz?igsh=ZXI3bmNwMDU5ZDZo"
+        target="_blank"
+        class="instagram-button"
+      >
+        Instagram ✨
       </a>
     </div>
+
+    <!-- FRASE -->
+    <p class="quote fade-up">
+      “Sin culpa y sin modas, que tu alimentación sea inteligente y sostenible.”
+    </p>
 
     <footer>
       © 2026 · Alimentación Inteligente
     </footer>
 
   </div>
+  <script>
+  const elements = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
