@@ -223,7 +223,7 @@
 
     <!-- PARA QUIÉN -->
     <section>
-      <h2>Este lugar es para ti si…</h2>
+      <h2>Este lugar es para ti, si…</h2>
       <ul>
         <li>Te cansaste de empezar y abandonar dietas</li>
         <li>Quieres mejorar tu relación con la comida</li>
@@ -280,42 +280,32 @@
       “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
     </p>
 
-    <footer>
-      © 2026 · Alimentación Inteligente
-    </footer>
+<footer>
+  © 2026 · Alimentación Inteligente
+</footer>
 
-  </div>
-  <script>
-  const elements = document.querySelectorAll('.fade-up');
+</div>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, {
-    threshold: 0.15
-  });
-
-  elements.forEach(el => observer.observe(el));
-</script>
 <script>
   const elements = document.querySelectorAll('.fade-up');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    },
+    {
+      threshold: 0.3
+    }
+  );
 
   elements.forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
