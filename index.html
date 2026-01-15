@@ -4,26 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alimentación Inteligente🍒</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
-  
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- Google Calendar Appointment Scheduling -->
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 
   <style>
-  body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: #f7f6f3;
-  color: #3F3F3F;
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f7f6f3;
+      color: #3F3F3F;
+      line-height: 1.6;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 40px 24px; /* más aire lateral */
     }
 
     /* Logo */
@@ -45,21 +46,21 @@
     }
 
     h1 {
-  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #6B4F3F;
-}
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-align: center;
+      color: #6B4F3F;
+    }
 
     h2 {
-  font-size: 1.5rem;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: #3F3F3F;
-}
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      text-align: center;
+      color: #3F3F3F;
+      font-weight: 700;
+    }
 
     p {
       font-size: 1rem;
@@ -72,20 +73,25 @@
       text-align: center;
     }
 
+    .hero p {
+      font-weight: 700;
+      text-align: center;
+    }
+
     .card {
       background-color: #ffffff;
-      padding: 24px;
+      padding: 28px;
       border-radius: 8px;
       margin-top: 30px;
     }
 
     ul {
-      padding-left: 18px;
+      padding-left: 20px;
       text-align: left;
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .calendar-button-wrapper {
@@ -93,7 +99,14 @@
       text-align: center;
     }
 
-    /* Botón WhatsApp ajustado a tu paleta */
+    .calendar-note {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    /* Botón WhatsApp */
     .whatsapp-button {
       display: block;
       margin: 30px auto 0;
@@ -105,28 +118,38 @@
       font-size: 1rem;
       text-align: center;
       max-width: 280px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .whatsapp-button:hover {
       background-color: #6a9a82;
     }
 
-    /* Frase motivadora */
     .quote {
-  margin-top: 50px;
-  text-align: center;
-  font-style: italic;
-  color: #5A5A5A;
-  font-size: 0.95rem;
-}
+      margin-top: 50px;
+      text-align: center;
+      font-style: italic;
+      color: #5A5A5A;
+      font-size: 0.95rem;
+    }
+
+    .instagram-link {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .instagram-link a {
+      color: #6B4F3F;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
     footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #5A5A5A;
-  text-align: center;
-}
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #5A5A5A;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -148,10 +171,11 @@
       <h2>Hola, soy Arely🦦</h2>
       <p>
         Me gusta visitar cafeterías con mi perrita o simplemente ir a trabajar
-        con un buen café y un pan, porque sí, también se puede :).
+        con un buen café y un pan, porque sí, también se puede.
       </p>
       <p>
-        Mi objetivo como nutrióloga es ayudarte a conocer los beneficios de cada alimento para que puedas identificar sus nutrientes y aprender a balancear tus comidas.
+        Mi objetivo como nutrióloga es ayudarte a conocer los beneficios de cada alimento,
+        aprender a balancear tus comidas y construir una relación más consciente con la comida.
       </p>
     </section>
 
@@ -163,13 +187,12 @@
         <li>Plan de alimentación personalizado (PDF + App)</li>
         <li>Análisis de composición corporal (InBody)</li>
         <li>Atención por WhatsApp durante el proceso</li>
-
       </ul>
     </section>
 
     <!-- PARA QUIÉN ES -->
     <section>
-      <h2>Este espacio es para tí si…</h2>
+      <h2>Este espacio es para ti si…</h2>
       <ul>
         <li>Te cansaste de empezar y abandonar dietas</li>
         <li>Quieres mejorar tu relación con la comida</li>
@@ -182,31 +205,30 @@
     <section class="card">
       <h2>Agenda tu consulta</h2>
       <p>
-        Puedes reservar tu fecha y hora como mejor te convenga..
+        Puedes reservar tu fecha y hora con calma.
         Tu espacio se confirma una vez realizado el anticipo.
       </p>
 
-  <div class="calendar-button-wrapper">
-    <script>
-      (function() {
-        var target = document.currentScript;
-        window.addEventListener('load', function() {
-          calendar.schedulingButton.load({
-            url: 'https://calendar.app.google/jdTpqmkMBUSFsxcT7',
-            color: '#A79B8E',
-            label: 'Ver disponibilidad',
-            target,
-            <p style="font-size:0.85rem; color:#777; text-align:center; margin-top:8px;">
-  Al dar clic se abrirá el calendario de Google en una nueva ventana.
-</p>
-          });
-        });
-      })();
-    </script>
-  </div>
-</section>
+      <div class="calendar-button-wrapper">
+        <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true',
+                color: '#A79B8E',
+                label: 'Ver disponibilidad',
+                target,
+              });
+            });
+          })();
+        </script>
+      </div>
 
-
+      <p class="calendar-note">
+        Al dar clic se abrirá el calendario de Google en una nueva ventana.
+      </p>
+    </section>
 
     <!-- Link WA -->
     <a href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
@@ -217,8 +239,15 @@
 
     <!-- FRASE MOTIVADORA -->
     <p class="quote">
-      “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
+      “Sin culpa y sin modas, que tu alimentación sea inteligente y sostenible.”
     </p>
+
+    <!-- INSTAGRAM -->
+    <div class="instagram-link">
+      <a href="https://www.instagram.com/nutri.arelydelacruz?igsh=ZXI3bmNwMDU5ZDZo" target="_blank">
+        Sígueme en Instagram ✨
+      </a>
+    </div>
 
     <footer>
       © 2026 · Alimentación Inteligente
