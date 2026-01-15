@@ -38,24 +38,25 @@
 
     /* Foto perfil */
 .profile-photo {
-  width: 350px;          /* ⬅️ más grande, protagonista pero elegante */
-  height: auto;
+  width: 350px;              /* un poco más grande */
+  height: auto;              /* natural */
+  border-radius: 0;          /* sin círculo */
+  object-fit: cover;
   display: block;
-  margin: 12px auto 8px; /* separación natural con texto */
-  border-radius: 8px;    /* apenas perceptible */
+  margin: 10px auto 6px;     /* 👈 menos espacio abajo */
+  box-shadow: none;          /* más orgánico */
 }
-
     h1 {
       font-size: 2.4rem;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 2px;
       text-align: center;
       color: #6B4F3F;
     }
 
     h2 {
       font-size: 1.5rem;
-      margin-top: 40px;
+      margin-top: 10px;
       margin-bottom: 12px;
       text-align: center;
       font-weight: 700;
@@ -173,10 +174,11 @@
 }
 
 .quote span {
-  opacity: 0;
   display: inline-block;
-  transform: translateY(4px);
+  opacity: 0;
+  transform: translateY(6px);
   transition: opacity 0.4s ease, transform 0.4s ease;
+  white-space: pre; /* 👈 ESTO es la clave */
 }
 
 .quote span.show {
@@ -246,7 +248,7 @@ footer {
         Te cuento un poco sobre mi. 
         Egresé de la Facultad de Nutrición en 2021 y posteriormente realicé una ingeniería en Sistemas👩🏻‍💻. 
         Me gusta visitar cafeterías con mi perrita Leia (que verás mucho por aquí 🐾) o simplemente ir a trabajar
-        tomando café y pan, porque sí, también se puede.
+        con un buen café y pan, porque sí, también se puede.
       </p>
       <p>
         Mi objetivo como nutrióloga es ayudarte a conocer los beneficios de cada alimento,
