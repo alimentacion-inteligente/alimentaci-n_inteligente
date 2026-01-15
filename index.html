@@ -37,7 +37,6 @@
 }
 
     /* Foto perfil */
-    /* Foto perfil */
 .profile-photo {
   width: 350px;          /* ⬅️ más grande, protagonista pero elegante */
   height: auto;
@@ -173,6 +172,18 @@
   font-size: 0.95rem;
 }
 
+.quote span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(4px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.quote span.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Contenedor de botones finales */
 .final-actions {
   display: flex;
@@ -200,6 +211,15 @@ footer {
   font-size: 0.85rem;
   color: #6A6A6A;
   line-height: 1.4;
+}
+.footer-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  max-width: 90px;
+  opacity: 0.85;
 }
     
   </style>
@@ -281,7 +301,7 @@ footer {
     </section>
     
      <!-- FRASE -->
-    <p class="quote fade-up">
+    <p class="quote type-words">
       “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
     </p>
 
@@ -308,7 +328,7 @@ footer {
 
 <footer>
   <div class="footer-address">
-    Av. Dr. Eleuterio Gonzalez 914, Segundo piso, Local 4 <br>
+    Av. Dr. Eleuterio Gonzalez 914, Segundo piso. <br>
     Monterrey, NL.
   </div>
   
@@ -325,9 +345,9 @@ footer {
 </div>
 
 <script>
-  const elements = document.querySelectorAll('.fade-up');
+  const fadeElements = document.querySelectorAll('.fade-up');
 
-  const observer = new IntersectionObserver(
+  const fadeObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -337,12 +357,41 @@ footer {
         }
       });
     },
-    {
-      threshold: 0.3
-    }
+    { threshold: 0.3 }
   );
 
-  elements.forEach(el => observer.observe(el));
+  fadeElements.forEach(el => fadeObserver.observe(el));
+</script>
+
+<script>
+  const quote = document.querySelector('.type-words');
+  const originalText = quote.textContent;
+  quote.textContent = '';
+
+  const words = originalText.split(' ');
+  words.forEach(word => {
+    const span = document.createElement('span');
+    span.textContent = word + ' ';
+    quote.appendChild(span);
+  });
+
+  const spans = quote.querySelectorAll('span');
+
+  const quoteObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        spans.forEach((span, index) => {
+          setTimeout(() => {
+            span.classList.add('show');
+          }, index * 180);
+        });
+      } else {
+        spans.forEach(span => span.classList.remove('show'));
+      }
+    });
+  }, { threshold: 0.4 });
+
+  quoteObserver.observe(quote);
 </script>
 
 </body>
