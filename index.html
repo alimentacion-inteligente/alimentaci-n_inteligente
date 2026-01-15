@@ -18,46 +18,53 @@
       line-height: 1.6;
     }
 
-    .whatsapp-button {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 14px 26px;
-  background-color: #25D366;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.whatsapp-button:hover {
-  background-color: #1ebe5d;
-}
-
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
 
+    /* Logo */
+    .logo {
+      max-width: 160px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    /* Foto perfil */
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
     h1 {
       font-size: 2.4rem;
       font-weight: 600;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     h2 {
       font-size: 1.5rem;
       margin-top: 40px;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     p {
       font-size: 1rem;
       margin-bottom: 16px;
+      text-align: left;
     }
 
     .hero {
       margin-bottom: 40px;
+      text-align: center;
     }
 
     .card {
@@ -69,6 +76,7 @@
 
     ul {
       padding-left: 18px;
+      text-align: left;
     }
 
     li {
@@ -77,12 +85,42 @@
 
     .calendar-button-wrapper {
       margin-top: 24px;
+      text-align: center;
+    }
+
+    /* Botón WhatsApp ajustado a tu paleta */
+    .whatsapp-button {
+      display: block;
+      margin: 30px auto 0;
+      padding: 14px 26px;
+      background-color: #7DAA92;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-align: center;
+      max-width: 280px;
+      font-weight: 600;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #6a9a82;
+    }
+
+    /* Frase motivadora */
+    .quote {
+      margin-top: 50px;
+      text-align: center;
+      font-style: italic;
+      color: #6f7f76;
+      font-size: 0.95rem;
     }
 
     footer {
-      margin-top: 60px;
+      margin-top: 20px;
       font-size: 0.9rem;
       color: #6b6b6b;
+      text-align: center;
     }
   </style>
 </head>
@@ -90,43 +128,26 @@
 <body>
   <div class="container">
 
+    <!-- LOGO -->
+    <img src="img/logo.png" alt="Logo Alimentación Inteligente" class="logo">
+
     <!-- HERO -->
     <section class="hero">
-      <h1>Alimentación Inteligente🍒 </h1>
-      <p>
-        Nutrición sin culpa, con acompañamiento real.
-      </p>
+      <h1>Alimentación Inteligente🍒</h1>
+      <p>Nutrición sin culpa, con acompañamiento real.</p>
+    </section>
 
-      <!-- Botón Google Calendar 
-      <div class="calendar-button-wrapper">
-        <script>
-          (function() {
-            var target = document.currentScript;
-            window.addEventListener('load', function() {
-              calendar.schedulingButton.load({
-                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true',
-                color: '#A79B8E',
-                label: 'Agendar consulta',
-                target,
-              });
-            });
-          })();
-        </script>
-      </div>
-    </section> -->
-
-
-
-    <!-- QUIÉN SOY -->
+    <!-- FOTO + QUIÉN SOY -->
     <section>
+      <img src="img/arely.jpg" alt="Arely, nutrióloga" class="profile-photo">
       <h2>Hola, soy Arely🦦</h2>
       <p>
-        Me gusta visitar cafeterías con mi perrita o sólo ir a trabajar 
-        con un buen café y un pan, porque sí, si se puede :)
+        Me gusta visitar cafeterías con mi perrita o simplemente ir a trabajar
+        con un buen café y un pan, porque sí: sí se puede.
       </p>
       <p>
-        Mi enfoque no es la perfección, sino la consciencia,
-        el entendimiento del cuerpo y la alimentación sostenible.
+        Mi enfoque no es la perfección, sino la consciencia, el entendimiento del cuerpo
+        y una alimentación que se adapte a tu vida.
       </p>
     </section>
 
@@ -134,12 +155,11 @@
     <section class="card">
       <h2>Modalidad en línea o presencial</h2>
       <ul>
-        Incluye:
-        <li>Historia clínica  
-        <li>Plan de alimentación personalizado en PDF y aplicación móvil</li>
-        <li>Análisis de comósición corporal (con InBody)</li>
-        <li>Atención por WhatsApp (2 semanas a partir de la consulta)</li>
-        y más..
+        <li>Historia clínica completa</li>
+        <li>Plan de alimentación personalizado (PDF + app)</li>
+        <li>Análisis de composición corporal (InBody)</li>
+        <li>Atención por WhatsApp durante el proceso</li>
+        <li>Material y acompañamiento adicional</li>
       </ul>
     </section>
 
@@ -148,9 +168,9 @@
       <h2>Este espacio es para ti si…</h2>
       <ul>
         <li>Te cansaste de empezar y abandonar dietas</li>
-        <li>Queres mejorar tu relación con la comida</li>
-        <li>Buscas acompañamiento</li>
-        <li>Quieres aprender a comer sin culpa</li>
+        <li>Quieres mejorar tu relación con la comida</li>
+        <li>Buscas acompañamiento sin culpa</li>
+        <li>Quieres aprender a comer de forma sostenible</li>
       </ul>
     </section>
 
@@ -162,7 +182,6 @@
         Tu espacio se confirma una vez realizado el anticipo.
       </p>
 
-      <!-- Botón Google Calendar -->
       <div class="calendar-button-wrapper">
         <script>
           (function() {
@@ -180,14 +199,20 @@
       </div>
     </section>
 
-          <!-- Link WA -->
-    <a href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F" target="_blank" class="whatsapp-button">
-  Enviáme mensaje por WhatsApp 
-</a>
+    <!-- Link WA -->
+    <a href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
+       target="_blank"
+       class="whatsapp-button">
+      Envíame mensaje por WhatsApp
+    </a>
+
+    <!-- FRASE MOTIVADORA -->
+    <p class="quote">
+      “No se trata de hacerlo perfecto, sino de hacerlo posible.”
+    </p>
 
     <footer>
-      © 2026 · Alimentación Inteligente 
-      
+      © 2026 · Alimentación Inteligente
     </footer>
 
   </div>
