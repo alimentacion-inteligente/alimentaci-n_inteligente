@@ -158,29 +158,33 @@
 }
 
 
-    /* Acciones finales */
-    .final-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
+    /* Frase antes de botones */
+.quote {
+  margin-top: 50px;
+  margin-bottom: 24px; /* separación con botones */
+  text-align: center;
+  font-style: italic;
+  color: #5A5A5A;
+  font-size: 0.95rem;
+}
 
-    .quote {
-      margin-top: 50px;
-      text-align: center;
-      font-style: italic;
-      color: #5A5A5A;
-      font-size: 0.95rem;
-    }
+/* Contenedor de botones finales */
+.final-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px; /* 👈 espacio ANTES del footer */
+  flex-wrap: wrap;
+}
 
-    footer {
-      margin-top: 20px;
-      font-size: 0.9rem;
-      color: #5A5A5A;
-      text-align: center;
-    }
+/* Footer */
+footer {
+  margin-top: 0; /* ya no depende de botones */
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #5A5A5A;
+  text-align: center;
+}
     
     .footer-copy {
   margin-top: 20px; /* separación con la frase */
@@ -297,7 +301,7 @@
    
 
 <footer>
-  <div class="footer-copy fade-up">
+  <div class="footer-copy">
     © 2026 · Alimentación Inteligente
   </div>
 
