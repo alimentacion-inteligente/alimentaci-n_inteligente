@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Nutrición</title>
+
+  <!-- Google Calendar Appointment Scheduling -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f7f6f3;
+      color: #2f2f2f;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .hero {
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .calendar-button-wrapper {
+      margin-top: 24px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #6b6b6b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Nutrición sin culpa,<br>con acompañamiento real</h1>
+      <p>
+        Un espacio para organizar tu alimentación sin extremos,
+        sin regaños y adaptado a tu vida.
+      </p>
+
+      <!-- Botón Google Calendar -->
+      <div class="calendar-button-wrapper">
+        <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true',
+                color: '#A79B8E',
+                label: 'Agendar consulta',
+                target,
+              });
+            });
+          })();
+        </script>
+      </div>
+    </section>
+
+    <!-- QUIÉN SOY -->
+    <section>
+      <h2>Hola, soy Arely</h2>
+      <p>
+        Soy nutrióloga y acompaño a personas que quieren mejorar su relación
+        con la comida, sin que la alimentación se sienta como castigo.
+      </p>
+      <p>
+        Mi enfoque no es la perfección, sino el orden posible,
+        el entendimiento del cuerpo y procesos sostenibles.
+      </p>
+    </section>
+
+    <!-- CÓMO ES LA CONSULTA -->
+    <section class="card">
+      <h2>¿Cómo es la consulta?</h2>
+      <ul>
+        <li>Consulta presencial y en línea</li>
+        <li>Acompañamiento y seguimiento</li>
+        <li>Planeación flexible y realista</li>
+        <li>Sin juicios, sin culpa, sin dietas extremas</li>
+      </ul>
+    </section>
+
+    <!-- PARA QUIÉN ES -->
+    <section>
+      <h2>Este espacio es para ti si…</h2>
+      <ul>
+        <li>Te cansaste de empezar y abandonar dietas</li>
+        <li>Quieres orden sin rigidez</li>
+        <li>Buscas acompañamiento, no presión</li>
+        <li>Quieres aprender a comer sin culpa</li>
+      </ul>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="card">
+      <h2>Agenda tu consulta</h2>
+      <p>
+        Puedes elegir tu fecha con calma.
+        Tu espacio se confirma una vez realizado el anticipo.
+      </p>
+
+      <!-- Botón Google Calendar -->
+      <div class="calendar-button-wrapper">
+        <script>
+          (function() {
+            var target = document.currentScript;
+            window.addEventListener('load', function() {
+              calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true',
+                color: '#A79B8E',
+                label: 'Ver disponibilidad',
+                target,
+              });
+            });
+          })();
+        </script>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 · Consulta de Nutrición
+    </footer>
+
+  </div>
+</body>
+</html>
