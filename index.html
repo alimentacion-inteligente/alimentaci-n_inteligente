@@ -199,7 +199,7 @@
     <!-- FOTO + QUIÉN SOY -->
     <section>
       <img src="img/arely.jpg" alt="Arely, nutrióloga" class="profile-photo fade-up">
-      <h2>Hola, soy Arely🦦</h2>
+      <h2>Hola, soy Nutri Arely🦦</h2>
       <p>
         Me gusta visitar cafeterías con mi perrita o simplemente ir a trabajar
         con un buen café y un pan, porque sí, también se puede.
@@ -233,7 +233,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="card">
+    <section class="card fade-up">
       <h2>📲 Agenda tu consulta</h2>
       <p>
         Reserva tu fecha y hora con anticipación.
@@ -247,7 +247,7 @@
           rel="noopener"
           class="calendar-link"
         >
-          Ver disponibilidad
+          Ver disponibilidad 🗓️
         </a>
 
         <p class="calendar-note">
@@ -257,7 +257,7 @@
     </section>
 
     <!-- BOTONES FINALES -->
-    <div class="final-actions">
+    <div class="final-actions fade-up">
       <a
         href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
         target="_blank"
@@ -277,7 +277,7 @@
 
     <!-- FRASE -->
     <p class="quote fade-up">
-      “Sin culpa y sin modas, que tu alimentación sea inteligente y sostenible.”
+      “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
     </p>
 
     <footer>
@@ -296,6 +296,23 @@
     });
   }, {
     threshold: 0.15
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+<script>
+  const elements = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, {
+    threshold: 0.2
   });
 
   elements.forEach(el => observer.observe(el));
