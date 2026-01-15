@@ -165,25 +165,23 @@
 
     /* Frase antes de botones */
 .quote {
-  margin-top: 50px;
-  margin-bottom: 24px; /* separación con botones */
+  max-width: 520px;       /* 👈 controla el ancho del texto */
+  margin: 50px auto 24px;
   text-align: center;
   font-style: italic;
   color: #5A5A5A;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .quote span {
-  display: inline-block;
+  display: inline;        /* 👈 CLAVE */
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  white-space: pre; /* 👈 ESTO es la clave */
+  transition: opacity 0.4s ease;
 }
 
 .quote span.show {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* Contenedor de botones finales */
@@ -370,10 +368,11 @@ footer {
   const originalText = quote.textContent;
   quote.textContent = '';
 
-  const words = originalText.split(' ');
+  const words = originalText.match(/\S+\s*/g);
+
   words.forEach(word => {
     const span = document.createElement('span');
-    span.textContent = word + ' ';
+    span.textContent = word;
     quote.appendChild(span);
   });
 
@@ -385,7 +384,7 @@ footer {
         spans.forEach((span, index) => {
           setTimeout(() => {
             span.classList.add('show');
-          }, index * 180);
+          }, index * 160);
         });
       } else {
         spans.forEach(span => span.classList.remove('show'));
