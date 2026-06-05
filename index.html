@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alimentación Inteligente🍒</title>
 
-  <!-- Tipografía -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Nunito', sans-serif;
       background-color: #f7f6f3;
       color: #3F3F3F;
       line-height: 1.6;
@@ -24,43 +22,16 @@
       padding: 40px 24px;
     }
 
-    /* Logo al final*/
-    .footer-logo {
-  margin-top: 18px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-logo img {
-  width: 64px;          /* pequeño y elegante */
-  opacity: 0.75;        /* discreto */
-}
-
-    /* Foto perfil */
-.profile-photo {
-  width: 350px;              /* un poco más grande */
-  height: auto;              /* natural */
-  border-radius: 0;          /* sin círculo */
-  object-fit: cover;
-  display: block;
-  margin: 10px auto 6px;     /* 👈 menos espacio abajo */
-  box-shadow: none;          /* más orgánico */
-}
     h1 {
-  font-family: 'Sacramento';
-  font-size: 3rem;        /* elegante pero protagonista */
-  font-weight: 400;       /* Sacramento no usa bold */
-  margin-bottom: 4px;
-  text-align: center;
-  line-height: 1;         /* 👈 reduce espacio entre líneas en móvil */
-  color: #6B4F3F;
-}
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      color: #6B4F3F;
+      margin-bottom: 4px;
+    }
 
     h2 {
       font-size: 1.5rem;
-      margin-top: 10px;
-      margin-bottom: 12px;
       text-align: center;
       font-weight: 700;
     }
@@ -68,445 +39,205 @@
     p {
       font-size: 1rem;
       margin-bottom: 16px;
-      text-align: left;
     }
 
-    .hero {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    .hero p {
-      font-weight: 700;
-      text-align: center;
-    }
-
+    /* CARDS HOMOGÉNEAS */
     .card {
       background-color: #ffffff;
       padding: 28px;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-top: 30px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
     }
 
-    ul {
-      padding-left: 20px;
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    li {
-      margin-bottom: 10px;
+    /* FOTO */
+    .profile-photo {
+      width: 350px;
+      display: block;
+      margin: auto;
     }
 
-    /* Botón calendario */
-    .calendar-link {
+    /* CTA BUTTONS */
+    .whatsapp-button, .instagram-button {
+      padding: 14px 26px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
       display: inline-block;
-      padding: 14px 26px;
-      background-color: #A79B8E;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
+    }
+
+    .whatsapp-button { background: #7DAA92; }
+    .instagram-button { background: #6B4F3F; }
+
+    .final-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    /* ===== TESTIMONIAL SLIDER PREMIUM ===== */
+
+    .testimonial-carousel {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      padding: 20px 10px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      align-items: center;
+    }
+
+    .testimonial-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial-card {
+      flex: 0 0 240px;
+      height: 170px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      scroll-snap-align: center;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.6;
+      transform: scale(0.92);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* CARD ACTIVA (CENTRO) */
+    .testimonial-card.active {
+      transform: scale(1.08);
+      opacity: 1;
+    }
+
+    .testimonial-text {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.92rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .testimonial-name {
+      text-align: right;
       font-weight: 700;
-      font-size: 1rem;
-    }
-
-    .calendar-link:hover {
-      background-color: #95897d;
-    }
-
-    .calendar-note {
       font-size: 0.85rem;
-      color: #777;
-      text-align: center;
-      margin-top: 8px;
+      color: #6B4F3F;
+      margin-top: 10px;
     }
 
-    /* Botón WhatsApp */
-    .whatsapp-button {
-      padding: 14px 26px;
-      background-color: #7DAA92;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-align: center;
-      min-width: 220px;
+    /* SCROLL SMOOTH */
+    .testimonial-carousel {
+      scroll-behavior: smooth;
     }
-
-    .whatsapp-button:hover {
-      background-color: #6a9a82;
-    }
-
-    /* Botón Instagram */
-    .instagram-button {
-      padding: 14px 26px;
-      background-color: #6B4F3F;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-align: center;
-      min-width: 220px;
-    }
-
-    .instagram-button:hover {
-      background-color: #5a4133;
-    }
-
-/* Animación scroll */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-    /* Frase antes de botones */
-.quote {
-  max-width: 520px;       /* 👈 controla el ancho del texto */
-  margin: 50px auto 24px;
-  text-align: center;
-  font-style: italic;
-  color: #5A5A5A;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.quote span {
-  display: inline;        /* 👈 CLAVE */
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.quote span.show {
-  opacity: 1;
-}
-
-/* Contenedor de botones finales */
-.final-actions {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 40px; /* 👈 espacio ANTES del footer */
-  flex-wrap: wrap;
-}
-
-/* Carrusel */
-.testimonial-carousel {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 10px 5px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Oculta scrollbar (opcional) */
-.testimonial-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.testimonial-card {
-  min-width: 260px;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 18px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  scroll-snap-align: start;
-  flex-shrink: 0;
-}
-
-.testimonial-card {
-  position: relative;
-}
-
-.testimonial-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 25px;
-  background: linear-gradient(transparent, white);
-  pointer-events: none;
-}
-
-.testimonial-text {
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 10px;
-  font-style: italic;
-
-  /* 👇 control del tamaño del texto */
-  display: -webkit-box;
-  -webkit-line-clamp: 4;   /* máximo de líneas visibles */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  line-height: 1.5;
-}
-
-.testimonial-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #6B4F3F;
-}
-
-.card {
-  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-}
-
-/* Footer */
-footer {
-  margin-top: 0; /* ya no depende de botones */
-  padding-top: 10px;
-  font-size: 0.9rem;
-  color: #5A5A5A;
-  text-align: center;
-}
-    
-    .footer-copy {
-  margin-top: 20px; /* separación con la frase */
-}
-
-.footer-address {
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #6A6A6A;
-  line-height: 1.4;
-}
-.footer-logo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.footer-logo img {
-  max-width: 90px;
-  opacity: 0.85;
-}
 
   </style>
-  
-  <link rel="icon" type="image/png" href="image.png.PNG">
-  
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Alimentación Inteligente</h1>
+    <p>Nutrición sin culpa, con acompañamiento real.</p>
+  </section>
 
-    <!-- HERO -->
-    <section class="hero fade-up">
-      <h1>Alimentación Inteligente</h1>
-      <p>Nutrición sin culpa, con acompañamiento real.</p>
-    </section>
+  <!-- QUIÉN SOY -->
+  <section>
+    <img src="foto.png" class="profile-photo">
+    <h2>Hola, soy Nutri Arely🍒</h2>
+    <p>Texto descriptivo...</p>
+  </section>
 
-    <!-- FOTO + QUIÉN SOY -->
-    <section>
-      <img src="foto.png" alt="Nutri Arely + Leia" class="profile-photo fade-up">
-      <h2>Hola, soy Nutri Arely🍒</h2>
-      <p>
-        Te cuento un poco sobre mi. 
-        Estudié Nutrición en la UANL y posteriormente una ingeniería en Sistemas👩🏻‍💻. 
-        Me gusta visitar cafeterías y trabajar tomando
-        un buen café con pan, porque sí, también se puede.
-      </p>
-      <p>
-        Mi objetivo como nutrióloga es ayudarte a conocer los beneficios de cada alimento,
-        aprender a balancear tus comidas y construir una relación más consciente con la comida.
-      </p>
-    </section>
+  <!-- CARD -->
+  <section class="card">
+    <h2>Consulta en línea o presencial</h2>
+    <p>Detalles de consulta...</p>
+  </section>
 
-    <!-- CONSULTA -->
-    <section class="card fade-up">
-      <h2>Consulta en línea o presencial</h2>
-      <ul>
-        <li>Historia clínica</li>
-        <li>Plan de alimentación personalizado (PDF + App)</li>
-        <li>Análisis de composición corporal (InBody) - Sólo presencial</li>
-        <li>Acompañamiento por WhatsApp</li>
-      </ul>
-    </section>
+  <!-- PARA TI -->
+  <section class="card">
+    <h2>Este lugar es para ti sí…</h2>
+    <ul>
+      <li>Te cansaste de dietas</li>
+      <li>Quieres mejorar relación con comida</li>
+      <li>Buscas acompañamiento sin culpa</li>
+      <li>Quieres comer sostenible</li>
+    </ul>
+  </section>
 
-    <!-- PARA QUIÉN -->
-    <section>
-      <h2>Este lugar es para ti sí…</h2>
-      <ul>
-        <li>Te cansaste de empezar y abandonar dietas</li>
-        <li>Quieres mejorar tu relación con la comida</li>
-        <li>Buscas acompañamiento sin culpa</li>
-        <li>Quieres aprender a comer de forma sostenible</li>
-      </ul>
-    </section>
+  <!-- TESTIMONIOS -->
+  <section class="card">
+    <h2>💬 Opiniones de pacientes</h2>
 
-    <!-- CTA -->
-    <section class="card fade-up">
-      <h2>📲 Agenda tu consulta</h2>
-      <p>
-        Reserva tu cita con anticipación.
-        Tu espacio se confirma una vez realizado el anticipo según la modalidad que elijas.
-      </p>
+    <div class="testimonial-carousel" id="carousel">
 
-      <div style="text-align:center; margin-top:20px;">
-        <a
-          href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true"
-          target="_blank"
-          rel="noopener"
-          class="calendar-link"
-        >
-          Ver disponibilidad 🗓️
-        </a>
-
-        <p class="calendar-note">
-          Se abrirá el calendario de Google en una nueva ventana.
-        </p>
+      <div class="testimonial-card active">
+        <p class="testimonial-text">“Aprendí a comer sin culpa y sin restricciones.”</p>
+        <span class="testimonial-name">Ana G.</span>
       </div>
-    </section>
-    
-       <!-- TESTIMONIOS -->
-<section class="card fade-up">
-  <h2>💬Opiniones de pacientes</h2>
 
-  <div class="testimonial-carousel">
+      <div class="testimonial-card">
+        <p class="testimonial-text">“Organizo mis comidas sin ansiedad.”</p>
+        <span class="testimonial-name">Carlos M.</span>
+      </div>
 
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        “Me ayudó a dejar las dietas restrictivas y aprender a comer sin culpa.”
-      </p>
-      <span class="testimonial-name">— Ana G.</span>
+      <div class="testimonial-card">
+        <p class="testimonial-text">“Acompañamiento humano y real.”</p>
+        <span class="testimonial-name">Fernanda R.</span>
+      </div>
+
     </div>
-
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        “Por fin entendí cómo organizar mis comidas sin sentir ansiedad.”
-      </p>
-      <span class="testimonial-name">— Carlos M.</span>
-    </div>
-
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        “El acompañamiento es súper humano, nada de regaños.”
-      </p>
-      <span class="testimonial-name">— Fernanda R.</span>
-    </div>
-
-.testimonial-card {
-  position: relative;
-}
-
-.testimonial-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 25px;
-  background: linear-gradient(transparent, gray);
-  pointer-events: none;
-}
-
-  </div>
-</section>
-    
-     <!-- FRASE -->
-    <p class="quote type-words">
-      “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
-    </p>
-
-    <!-- BOTONES FINALES -->
-    <div class="final-actions fade-up">
-      <a
-        href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
-        target="_blank"
-        class="whatsapp-button"
-      >
-        WhatsApp 💬
-      </a>
-
-      <a
-        href="https://www.instagram.com/nutri.arelydelacruz?igsh=ZXI3bmNwMDU5ZDZo"
-        target="_blank"
-        class="instagram-button"
-      >
-        Instagram ✨
-      </a>
-    </div>
-
-
-  
-
-<footer>
-  <div class="footer-address">
-    Av. Dr. Eleuterio Gonzalez 914, Segundo piso. <br>
-    Monterrey, NL.
-  </div>
-  
-    <div class="footer-copy">
-    © 2026 · Alimentación Inteligente
-  </div>
-
-</footer>
-<div class="footer-logo fade-up">
-  <img src="image.png.PNG" alt="Logo Alimentación Inteligente">
-</div>
-
+  </section>
 
 </div>
 
 <script>
-  const fadeElements = document.querySelectorAll('.fade-up');
+const carousel = document.getElementById("carousel");
+const cards = document.querySelectorAll(".testimonial-card");
 
-  const fadeObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+function updateActiveCard() {
+  let closestIndex = 0;
+  let closestDistance = Infinity;
 
-  fadeElements.forEach(el => fadeObserver.observe(el));
-</script>
+  const center = carousel.scrollLeft + carousel.offsetWidth / 2;
 
-<script>
-  const quote = document.querySelector('.type-words');
-  const originalText = quote.textContent;
-  quote.textContent = '';
+  cards.forEach((card, index) => {
+    const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+    const distance = Math.abs(center - cardCenter);
 
-  const words = originalText.match(/\S+\s*/g);
-
-  words.forEach(word => {
-    const span = document.createElement('span');
-    span.textContent = word;
-    quote.appendChild(span);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
   });
 
-  const spans = quote.querySelectorAll('span');
+  cards.forEach(c => c.classList.remove("active"));
+  cards[closestIndex].classList.add("active");
+}
 
-  const quoteObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        spans.forEach((span, index) => {
-          setTimeout(() => {
-            span.classList.add('show');
-          }, index * 160);
-        });
-      } else {
-        spans.forEach(span => span.classList.remove('show'));
-      }
-    });
-  }, { threshold: 0.4 });
+carousel.addEventListener("scroll", () => {
+  requestAnimationFrame(updateActiveCard);
+});
 
-  quoteObserver.observe(quote);
+updateActiveCard();
 </script>
 
 </body>
