@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alimentación Inteligente🍒</title>
 
+  <!-- Tipografía -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+    
   <style>
     body {
       margin: 0;
-      font-family: 'Nunito', sans-serif;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #f7f6f3;
       color: #3F3F3F;
       line-height: 1.6;
@@ -22,126 +25,282 @@
       padding: 40px 24px;
     }
 
-    /* HERO */
-    .hero {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    /* Logo al final*/
+    .footer-logo {
+  margin-top: 18px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
 
+.footer-logo img {
+  width: 64px;          /* pequeño y elegante */
+  opacity: 0.75;        /* discreto */
+}
+
+    /* Foto perfil */
+.profile-photo {
+  width: 350px;              /* un poco más grande */
+  height: auto;              /* natural */
+  border-radius: 0;          /* sin círculo */
+  object-fit: cover;
+  display: block;
+  margin: 6px auto 6px;     /* 👈 menos espacio abajo */
+  box-shadow: none;          /* más orgánico */
+}
     h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 10px;
-      color: #6B4F3F;
-    }
+  font-family: 'Fraunces';
+  font-size: 2.6rem;   /* 👈 un poco más pequeño */
+  font-weight: 350;
+  margin-top: 90px;    /* 👈 más espacio arriba */
+  margin-bottom: 0px;
+  text-align: center;
+  line-height: 1;
+  color: #6B4F3F;
+}
 
     h2 {
-      text-align: center;
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-
-    /* CARD */
-    .card {
-      background: #fff;
-      padding: 28px;
-      border-radius: 10px;
-      margin-top: 30px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-    }
-
-    /* TESTIMONIOS */
-    .testimonial-carousel {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      overflow-x: auto;
-      padding: 10px 0;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      margin-bottom: 8px; /* 👈 clave: reduce espacio abajo */
-    }
-
-    .testimonial-carousel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .testimonial-card {
-      min-width: 240px;
-      max-width: 240px;
-      background: #fff;
-      border-radius: 10px;
-      padding: 18px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-      scroll-snap-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .testimonial-text {
-      font-size: 0.92rem;
-      text-align: center;
-      font-style: italic;
-      color: #444;
-      line-height: 1.5;
-    }
-
-    .testimonial-name {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #6B4F3F;
-      text-align: right;
+      font-size: 1.5rem;
       margin-top: 10px;
-    }
-
-    /* FRASE */
-    .quote {
-      max-width: 520px;
-      margin: 20px auto 15px; /* 👈 reducido */
+      margin-bottom: 12px;
       text-align: center;
-      font-style: italic;
-      color: #5A5A5A;
-      font-size: 0.95rem;
+      font-weight: 700;
     }
 
-    /* BOTONES */
-    .final-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
+    /* p {
+      font-size: 1rem;
+      margin-bottom: 10px; 
+      text-align: left; 
+    } */ 
+
+    .hero {
+  margin-bottom: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+ /* .hero p {
+    font-weight: 500; 
+    text-align: center; 
+    color: #5A5A5A; 
+    font-size: 1.05rem; 
+    max-width: 520px; 
+    margin: 0 auto; 
+    line-height: 1.5; 
+  } */ 
+
+.card {
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+    ul {
+      padding-left: 20px;
     }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Botón calendario */
+    .calendar-link {
+      display: inline-block;
+      padding: 14px 26px;
+      background-color: #A79B8E;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .calendar-link:hover {
+      background-color: #95897d;
+    }
+
+    .calendar-note {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    /* Botón WhatsApp */
+    .whatsapp-button {
+      padding: 14px 26px;
+      background-color: #7DAA92;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      min-width: 220px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #6a9a82;
+    }
+
+    /* Botón Instagram */
+    .instagram-button {
+      padding: 14px 26px;
+      background-color: #6B4F3F;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      min-width: 220px;
+    }
+
+    .instagram-button:hover {
+      background-color: #5a4133;
+    }
+
+/* Animación scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+    /* Frase antes de botones */
+.quote {
+  max-width: 520px;       /* 👈 controla el ancho del texto */
+  margin: 50px auto 24px;
+  text-align: center;
+  font-style: italic;
+  color: #5A5A5A;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.quote span {
+  display: inline;        /* 👈 CLAVE */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.quote span.show {
+  opacity: 1;
+}
+
+/* Contenedor de botones finales */
+.final-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px; /* 👈 espacio ANTES del footer */
+  flex-wrap: wrap;
+}
+
+
+  
+  .testimonial-carousel {
+  display: flex;
+  justify-content: center;   /* 👈 CENTRA todo el carrusel */
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 0 5px;       /* 👈 menos espacio abajo */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-padding: 20px;
+}
+
+/* oculta scrollbar */
+.testimonial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  min-width: 240px;
+  max-width: 240px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  scroll-snap-align: center;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-text {
+  font-size: 0.92rem;
+  color: #444;
+  font-style: italic;
+  text-align: center;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.testimonial-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6B4F3F;
+  margin-top: 10px;
+  text-align: right;
+  display: block;
+}
+
+/* Footer */
+footer {
+  margin-top: 0; /* ya no depende de botones */
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #5A5A5A;
+  text-align: center;
+}
+    
+    .footer-copy {
+  margin-top: 20px; /* separación con la frase */
+}
+
+.footer-address {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #6A6A6A;
+  line-height: 1.4;
+}
+.footer-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  max-width: 90px;
+  opacity: 0.85;
+}
 
   </style>
+  
+  <link rel="icon" type="image/png" href="image.png.PNG">
+  
 </head>
+
+<body>
+  <div class="container">
 
 
     <!-- HERO -->
-    <script>
-  const hero = document.querySelector('.hero');
-
-  window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
-
-    if (scroll > 80) {
-      hero.classList.add('hide');
-    } else {
-      hero.classList.remove('hide');
-    }
-  });
-</script>
-
-<div class="scroll-indicator">↓</div>
-
     <section class="hero fade-up">
       <h1>Alimentación Inteligente</h1>
       <!-- <p>Nutrición sin culpa, con acompañamiento real.</p> -->
