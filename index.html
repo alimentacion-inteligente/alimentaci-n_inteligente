@@ -72,11 +72,57 @@
       margin-bottom: 10px; 
       text-align: left; 
     } */ 
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .hero {
-  margin-bottom: 50px;
   text-align: center;
-  padding-top: 10px;
+
+  background: linear-gradient(
+    180deg,
+    #6B4F3F 0%,
+    #7A5A47 50%,
+    #f7f6f3 100%
+  );
+
+  color: #ffffff;
+
+  position: relative;
+  transition: all 0.8s ease;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 520px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.hero {
+  will-change: transform, opacity, filter;
+}
+
+.hero.hide {
+  opacity: 0;
+  transform: translateY(-30px) scale(0.98);
+  filter: blur(6px);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
 }
 
  /* .hero p {
@@ -298,9 +344,38 @@ footer {
 
 <body>
   <div class="container">
+    
+    .scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
 
 
     <!-- HERO -->
+    <script>
+  const hero = document.querySelector('.hero');
+
+  window.addEventListener('scroll', () => {
+    const scroll = window.scrollY;
+
+    if (scroll > 80) {
+      hero.classList.add('hide');
+    } else {
+      hero.classList.remove('hide');
+    }
+  });
+</script>
+
+<div class="scroll-indicator">↓</div>
+
     <section class="hero fade-up">
       <h1>Alimentación Inteligente</h1>
       <!-- <p>Nutrición sin culpa, con acompañamiento real.</p> -->
