@@ -221,6 +221,21 @@
   flex-shrink: 0;
 }
 
+.testimonial-card {
+  position: relative;
+}
+
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(transparent, white);
+  pointer-events: none;
+}
+
 .testimonial-text {
   font-size: 0.95rem;
   color: #444;
