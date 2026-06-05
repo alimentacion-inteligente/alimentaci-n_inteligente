@@ -226,12 +226,24 @@
   color: #444;
   margin-bottom: 10px;
   font-style: italic;
+
+  /* 👇 control del tamaño del texto */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   /* máximo de líneas visibles */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  line-height: 1.5;
 }
 
 .testimonial-name {
   font-size: 0.85rem;
   font-weight: 700;
   color: #6B4F3F;
+}
+
+.card {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
 }
 
 /* Footer */
@@ -379,7 +391,7 @@ footer {
   left: 0;
   right: 0;
   height: 25px;
-  background: linear-gradient(transparent, white);
+  background: linear-gradient(transparent, gray);
   pointer-events: none;
 }
 
