@@ -196,6 +196,44 @@
   flex-wrap: wrap;
 }
 
+/* Carrusel */
+.testimonial-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 5px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Oculta scrollbar (opcional) */
+.testimonial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  min-width: 260px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testimonial-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6B4F3F;
+}
+
 /* Footer */
 footer {
   margin-top: 0; /* ya no depende de botones */
@@ -327,7 +365,36 @@ footer {
       </a>
     </div>
 
-   
+   <!-- TESTIMONIOS -->
+<section class="card fade-up">
+  <h2>💬Opiniones de pacientes</h2>
+
+  <div class="testimonial-carousel">
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Me ayudó a dejar las dietas restrictivas y aprender a comer sin culpa.”
+      </p>
+      <span class="testimonial-name">— Ana G.</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “Por fin entendí cómo organizar mis comidas sin sentir ansiedad.”
+      </p>
+      <span class="testimonial-name">— Carlos M.</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        “El acompañamiento es súper humano, nada de regaños.”
+      </p>
+      <span class="testimonial-name">— Fernanda R.</span>
+    </div>
+
+  </div>
+</section>
+  
 
 <footer>
   <div class="footer-address">
