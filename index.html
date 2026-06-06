@@ -105,6 +105,55 @@
       margin-bottom: 10px;
     }
 
+/* FAQ + POLÍTICAS */
+
+.accordion-section {
+  margin-top: 30px;
+}
+
+.accordion {
+  border-bottom: 1px solid #ececec;
+}
+
+.accordion summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 0;
+  font-weight: 600;
+  color: #3F3F3F;
+  position: relative;
+  padding-right: 28px;
+}
+
+.accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 16px;
+  font-size: 1.2rem;
+  color: #6B4F3F;
+  transition: transform 0.2s ease;
+}
+
+.accordion[open] summary::after {
+  content: "−";
+}
+
+.accordion-content {
+  padding-bottom: 16px;
+  color: #5A5A5A;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
     /* Botón calendario */
     .calendar-link {
       display: inline-block;
@@ -396,6 +445,98 @@ footer {
     margin-bottom: 10px; /* 👈 reduce espacio visual */
   }
 </style>
+
+<section class="card fade-up accordion-section">
+  <h2>❓ Preguntas frecuentes</h2>
+
+  <details class="accordion">
+    <summary>¿Con qué frecuencia debo agendar consulta?</summary>
+    <div class="accordion-content">
+      <p>
+        Lo ideal es realizar seguimientos cada 2 a 4 semanas,
+        dependiendo de tu objetivo y progreso. Esto nos permite
+        realizar ajustes oportunos y mantener la motivación.
+      </p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary>¿Qué pasa si no cumplo al 100% mi plan?</summary>
+    <div class="accordion-content">
+      <p>
+        No te desanimes ni descuides el seguimiento. Lo importante
+        es identificar obstáculos, aprender de ellos y seguir adelante
+        con una estrategia que se adapte mejor a ti.
+      </p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary>¿Cómo me entregas mi plan y seguimiento?</summary>
+    <div class="accordion-content">
+      <p>
+        El plan de alimentación de te entrega en PDF a través del 
+        medio de comunicación que elijas y además se carga en la aplicación móvil.
+       
+      </p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary>¿Hay un horario para recibir atención por WhatsApp?</summary>
+    <div class="accordion-content">
+      <p>
+        El horario de atención es de lunes a sábado de 9:00 a.m. a
+        9:00 p.m. Si existiera algún cambio temporal te lo haré saber
+        con anticipación.
+      </p>
+    </div>
+  </details>
+</section>
+
+<section class="card fade-up accordion-section">
+  <h2>📋 Políticas de consulta</h2>
+
+  <details class="accordion">
+    <summary>🖋️Consideraciones</summary>
+
+    <div class="accordion-content">
+
+      <p>
+        En caso de que necesites reprogramar tu cita, te pido que lo hagas
+        con al menos 24 horas de anticipación; de lo contrario, se considerará
+        como consulta tomada y deberás realizar tu pago nuevamente.
+      </p>
+
+      <br>
+
+      <p>
+        Tu información será tratada con absoluta confidencialidad,
+        respetando la ética profesional y la normativa de protección
+        de datos personales.
+      </p>
+
+      <br>
+
+      <p>
+        El plan de alimentación y el material adicional están diseñados
+        específicamente para tu caso, por lo que no deben compartirse
+        ni reproducirse para otros fines.
+      </p>
+
+      <br>
+
+      <p>
+        Las dudas breves serán respondidas con gusto por WhatsApp o correo.
+        En caso de que tengas una duda compleja o requieras ajustes en tu
+        plan, te sugiero agendar una nueva consulta para darle el
+        seguimiento adecuado.
+      </p>
+
+    </div>
+
+  </details>
+</section>
     
      <!-- FRASE -->
     <p class="quote type-words">
