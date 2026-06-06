@@ -257,44 +257,53 @@
 
 /* FAQ + POLÍTICAS */
 
-.accordion-section {
+.info-section {
   margin-top: 30px;
 }
 
-.accordion {
-  border-bottom: 1px solid #ececec;
+.info-intro {
+  text-align: center;
+  color: #6A6A6A;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
 }
 
-.accordion summary {
+.accordion-item {
+  border-bottom: 1px solid #ece8e3;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-item summary {
   list-style: none;
   cursor: pointer;
-  padding: 16px 0;
-  font-weight: 600;
+  padding: 16px 4px;
+  font-weight: 700;
   color: #3F3F3F;
-  position: relative;
-  padding-right: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.accordion summary::-webkit-details-marker {
+.accordion-item summary::-webkit-details-marker {
   display: none;
 }
 
-.accordion summary::after {
+.accordion-item summary::after {
   content: "+";
-  position: absolute;
-  right: 0;
-  top: 16px;
   font-size: 1.2rem;
   color: #6B4F3F;
   transition: transform 0.2s ease;
 }
 
-.accordion[open] summary::after {
+.accordion-item[open] summary::after {
   content: "−";
 }
 
 .accordion-content {
-  padding-bottom: 16px;
+  padding: 0 4px 16px;
   color: #5A5A5A;
   line-height: 1.6;
   font-size: 0.95rem;
@@ -733,99 +742,74 @@ footer {
   }
 </style>
 
-<section class="card fade-up accordion-section">
+<section class="card fade-up info-section">
   <h2>❓ Preguntas frecuentes</h2>
 
-  <details class="accordion">
+  <p class="info-intro">
+    Aquí encontrarás respuestas a las dudas más comunes.
+  </p>
+
+  <details class="accordion-item">
     <summary>¿Con qué frecuencia debo agendar consulta?</summary>
     <div class="accordion-content">
-      <p>
-        Lo ideal es realizar seguimientos cada 2 a 4 semanas,
-        dependiendo de tu objetivo y progreso. Esto nos permite
-        realizar ajustes oportunos y mantener la motivación.
-      </p>
+      Lo ideal es realizar seguimientos cada 2-4 semanas, dependiendo de tu objetivo y progreso. Esto nos permite hacer los ajustes necesarios y mantener la motivación.
     </div>
   </details>
 
-  <details class="accordion">
+  <details class="accordion-item">
     <summary>¿Qué pasa si no cumplo al 100% mi plan?</summary>
     <div class="accordion-content">
-      <p>
-        No te desanimes ni descuides el seguimiento. Lo importante
-        es identificar obstáculos, aprender de ellos y seguir adelante
-        con una estrategia que se adapte mejor a ti.
-      </p>
+      No te desanimes ni descuides el seguimiento si no cumpliste el plan anterior. Lo importante es identificar obstáculos, aprender de ellos y seguir adelante con una estrategia que mejor se adapte a ti.
     </div>
   </details>
 
-  <details class="accordion">
+  <details class="accordion-item">
     <summary>¿Cómo me entregas mi plan y seguimiento?</summary>
     <div class="accordion-content">
-      <p>
-        El plan de alimentación de te entrega en PDF a través del 
-        medio de comunicación que elijas y además se carga en la aplicación móvil.
-       
-      </p>
+      El plan de alimentación y el material incluido se cargarán en una carpeta de Drive en formato PDF para que puedas consultarlos fácilmente y llevar un registro de tu progreso.
     </div>
   </details>
 
-  <details class="accordion">
+  <details class="accordion-item">
     <summary>¿Hay un horario para recibir atención por WhatsApp?</summary>
     <div class="accordion-content">
-      <p>
-        El horario de atención es de lunes a sábado de 9:00 a.m. a
-        9:00 p.m. Si existiera algún cambio temporal te lo haré saber
-        con anticipación.
-      </p>
+      El horario de atención es de lunes a sábado. Si existe algún cambio por motivos extraordinarios, te lo haré saber con anticipación.
     </div>
   </details>
 </section>
 
-<section class="card fade-up accordion-section">
+<section class="card fade-up info-section">
   <h2>📋 Políticas de consulta</h2>
 
-  <details class="accordion">
-    <summary>Cancelación o Cambio</summary>
+  <p class="info-intro">
+    Para brindarte una mejor atención, te comparto algunas políticas importantes.
+  </p>
+
+  <details class="accordion-item">
+    <summary>Reprogramación de citas</summary>
     <div class="accordion-content">
-      <p>
-        En caso de que necesites reprogramar tu cita, te pido que lo hagas
-        con al menos 24 horas de anticipación; de lo contrario, se considerará
-        como consulta tomada y deberás realizar tu pago nuevamente.
-      </p>
-    </div>
-  </details>
-        
-    <details class="accordion">
-    <summary>Privacidad de información</summary>
-    <div class="accordion-content">
-      <p>
-        Tu información será tratada con absoluta confidencialidad,
-        respetando la ética profesional y la normativa de protección
-        de datos personales.
-      </p>
+      En caso de que necesites reprogramar tu cita, te pido que lo hagas con al menos 24 horas de anticipación. De lo contrario, se considerará como consulta tomada y deberás realizar nuevamente el pago correspondiente.
     </div>
   </details>
 
-    <details class="accordion">
-    <summary>Estrategia personalizada</summary>
+  <details class="accordion-item">
+    <summary>Confidencialidad</summary>
     <div class="accordion-content">
-      <p>
-        El plan de alimentación y el material adicional están diseñados
-        específicamente para tu caso, por lo que no deben compartirse
-        ni reproducirse para otros fines.
-      </p>
+      Tu información será tratada con absoluta confidencialidad, respetando la ética profesional y la normativa de protección de datos personales.
     </div>
   </details>
-    
-    <details class="accordion">
-    <summary>Dudas por WhatsApp</summary>
+
+  <details class="accordion-item">
+    <summary>Uso del material entregado</summary>
     <div class="accordion-content">
-      <p>
-        Las dudas breves serán respondidas con gusto por WhatsApp o correo.
-        En caso de que tengas una duda compleja o requieras ajustes en tu
-        plan, te sugiero agendar una nueva consulta para darle el
-        seguimiento adecuado.
-      </p>
+      El plan de alimentación y el material adicional están diseñados específicamente para tu caso, por lo que no deben compartirse ni reproducirse para otros fines.
+    </div>
+  </details>
+
+  <details class="accordion-item">
+    <summary>Dudas y ajustes al plan</summary>
+    <div class="accordion-content">
+      Las dudas breves serán respondidas con gusto por WhatsApp o correo. Si requieres ajustes importantes o tienes una situación más compleja, te sugiero agendar una nueva consulta para brindarte el seguimiento adecuado.
     </div>
   </details>
 </section>
