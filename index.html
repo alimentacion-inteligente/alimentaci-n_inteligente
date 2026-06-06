@@ -105,87 +105,146 @@
       margin-bottom: 10px;
     }
 
-/* =========================
-   PAQUETE DESTACADO
-========================= */
+/* ==========================
+   ACORDEÓN PAQUETES
+========================== */
 
-.package-section {
-  margin-top: 40px;
+.accordion {
+  margin-top: 20px;
 }
 
-.package-card {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #faf8f6 100%
-  );
+.accordion-btn {
+  width: 100%;
+  background: #f9f7f4;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 20px;
 
-  border-radius: 18px;
-  padding: 32px;
-  max-width: 560px;
-  margin: 0 auto;
+  margin-bottom: 10px;
 
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-
-  position: relative;
-  overflow: hidden;
-}
-
-.package-badge {
-  display: inline-block;
-
-  background: #7DAA92;
-  color: white;
-
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
+  color: #6B4F3F;
 
-  padding: 6px 14px;
-  border-radius: 999px;
-
-  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-.package-card h3 {
-  margin: 0;
-  color: #6B4F3F;
-  font-size: 1.8rem;
+.accordion-btn:hover {
+  background: #f2eeea;
+}
+
+.accordion-btn span {
+  font-size: 1.2rem;
+}
+
+.accordion-content {
+  display: none;
+  padding: 5px 15px 20px;
+}
+
+.accordion-content.active {
+  display: block;
 }
 
 .package-price {
-  font-size: 3rem;
+  text-align: center;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #6B4F3F;
-  line-height: 1;
-
-  margin: 18px 0 10px;
+  margin-top: 20px;
 }
 
-.package-price span {
-  font-size: 1rem;
-  color: #777;
+.featured {
+  background: #f3efe9;
+  border: 1px solid rgba(107,79,63,.12);
 }
 
-.package-subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 24px;
-}
+/* =========================
+   PAQUETE DESTACADO
+=========================
 
-.package-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.package-section { 
+  margin-top: 40px; 
+} 
+ 
+.package-card { 
+  background: linear-gradient( 
+    180deg, 
+    #ffffff 0%,  
+    #faf8f6 100% 
+  ); 
 
-  text-align: left;
-}
+  border-radius: 18px; 
+  padding: 32px; 
+  max-width: 560px; 
+  margin: 0 auto; 
 
-.package-list li {
-  margin-bottom: 14px;
-  padding-left: 4px;
-}
+  text-align: center; 
+
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08); 
+
+  position: relative; 
+  overflow: hidden; 
+} 
+ 
+.package-badge { 
+  display: inline-block;  
+
+  background: #7DAA92; 
+  color: white; 
+
+  font-size: 0.8rem; 
+  font-weight: 700; 
+
+  padding: 6px 14px; 
+  border-radius: 999px; 
+
+  margin-bottom: 16px; 
+} 
+ 
+.package-card h3 { 
+  margin: 0; 
+  color: #6B4F3F; 
+  font-size: 1.8rem; 
+} 
+
+.package-price { 
+  font-size: 3rem; 
+  font-weight: 700; 
+  color: #6B4F3F; 
+  line-height: 1; 
+
+  margin: 18px 0 10px; 
+}c
+
+.package-price span { 
+  font-size: 1rem; 
+  color: #777; 
+} 
+
+.package-subtitle { 
+  text-align: center; 
+  color: #666; 
+  margin-bottom: 24px; 
+} 
+
+.package-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+
+  text-align: left; 
+} 
+
+.package-list li { 
+  margin-bottom: 14px; 
+  padding-left: 4px; 
+} */
 
 
 /* FAQ + POLÍTICAS */
@@ -500,7 +559,114 @@ footer {
       </div>
     </section>
     
-<!-- PAQUETES -->
+    <!-- PAQUETES -->
+<section class="card fade-up">
+  <h2>✨ Servicios y paquetes</h2>
+
+  <div class="accordion">
+
+    <!-- CONSULTA INDIVIDUAL -->
+    <button class="accordion-btn">
+      Consulta Individual
+      <span>+</span>
+    </button>
+
+    <div class="accordion-content">
+      <p><strong>Modalidad presencial o virtual</strong></p>
+
+      <ul>
+        <li>Historia clínica y evaluación nutricional.</li>
+        <li>Plan de alimentación personalizado.</li>
+        <li>Material educativo complementario.</li>
+        <li>Acceso a la app de seguimiento.</li>
+        <li>Resolución de dudas por WhatsApp.</li>
+      </ul>
+
+      <p><strong>📍 Presencial</strong></p>
+      <ul>
+        <li>Consulta en consultorio.</li>
+        <li>Análisis de composición corporal con InBody.</li>
+      </ul>
+
+      <p><strong>💻 Virtual</strong></p>
+      <ul>
+        <li>Consulta por videollamada.</li>
+        <li>Evaluación mediante información y registros proporcionados durante la consulta.</li>
+      </ul>
+
+      <p class="package-price">$450 MXN</p>
+    </div>
+
+    <!-- PAQUETE MENSUAL -->
+    <button class="accordion-btn featured">
+      ⭐ Paquete Mensual
+      <span>+</span>
+    </button>
+
+    <div class="accordion-content">
+      <p>
+        Paga en una sola exhibición y obtén hasta 4 consultas durante un mes.
+      </p>
+
+      <ul>
+        <li>📍 Primera consulta presencial con bioimpedancia.</li>
+        <li>💻 Hasta 3 seguimientos virtuales.</li>
+        <li>📲 Atención por WhatsApp todo el mes.</li>
+        <li>📖 Kit de acompañamiento.</li>
+        <li>🎯 Recomendaciones personalizadas según diagnóstico y objetivos.</li>
+      </ul>
+
+      <p class="package-price">$850 MXN</p>
+    </div>
+
+    <!-- PAQUETE PAREJA -->
+    <button class="accordion-btn">
+      ❤️ Paquete Pareja
+      <span>+</span>
+    </button>
+
+    <div class="accordion-content">
+      <p>
+        Ideal para parejas, amigos o familiares que desean construir hábitos juntos.
+      </p>
+
+      <ul>
+        <li>Consulta inicial por separado.</li>
+        <li>Plan personalizado para cada integrante.</li>
+        <li>Seguimiento por separado.</li>
+        <li>Material educativo compartido.</li>
+        <li>Estrategias para organizar comidas en conjunto.</li>
+      </ul>
+
+      <p class="package-price">$1,500 MXN</p>
+    </div>
+
+    <!-- PAQUETE TRIMESTRAL -->
+    <button class="accordion-btn">
+      🌱 Paquete Trimestral
+      <span>+</span>
+    </button>
+
+    <div class="accordion-content">
+      <p>
+        Para quienes desean trabajar sus hábitos de forma continua y con mayor acompañamiento.
+      </p>
+
+      <ul>
+        <li>12 semanas de seguimiento.</li>
+        <li>Consultas programadas.</li>
+        <li>Ajustes continuos según progreso.</li>
+        <li>Material educativo adicional.</li>
+        <li>Ahorro respecto al pago individual.</li>
+      </ul>
+
+      <p class="package-price">$2,100 MXN</p>
+    </div>
+
+  </div>
+</section>
+    
+<!-- PAQUETES
 <section class="package-section fade-up">
   <h2>✨ Paquetes</h2>
 
@@ -524,8 +690,8 @@ footer {
       <li>📲 Atención por WhatsApp todo el mes en horario establecido</li>
       <li>🎯 Recomendaciones personalizadas según diagnóstico y objetivos</li>
     </ul>
-  </div>
-</section>
+  </div> 
+</section> -->
 
 <!-- TESTIMONIOS -->
   <section class="card fade-up">
@@ -746,6 +912,25 @@ footer {
   }, { threshold: 0.4 });
 
   quoteObserver.observe(quote);
+</script>
+
+<script>
+document.querySelectorAll('.accordion-btn').forEach(button => {
+
+  button.addEventListener('click', () => {
+
+    const content = button.nextElementSibling;
+
+    document.querySelectorAll('.accordion-content').forEach(item => {
+      if(item !== content){
+        item.classList.remove('active');
+      }
+    });
+
+    content.classList.toggle('active');
+  });
+
+});
 </script>
 
 </body>
