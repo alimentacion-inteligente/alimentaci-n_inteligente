@@ -490,6 +490,177 @@ footer {
   opacity: 0.85;
 }
 
+/* ==========================================
+   AJUSTES FINALES WEB NUTRI ARELY
+========================================== */
+
+/* Badge paquete SMART */
+
+.package-badge-small{
+  display:inline-block;
+  background:#7DAA92;
+  color:#fff;
+  font-size:.72rem;
+  font-weight:700;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-left:8px;
+  vertical-align:middle;
+  line-height:1.2;
+}
+
+/* Mantener destacado el SMART */
+
+.featured{
+  background:#f3efe9;
+  border:1px solid rgba(107,79,63,.12);
+}
+
+/* ==========================================
+   ACORDEÓN PAQUETES
+========================================== */
+
+.accordion{
+  margin-top:20px;
+}
+
+.accordion-btn{
+  width:100%;
+  background:#f9f7f4;
+  border:none;
+  border-radius:10px;
+  padding:16px 18px;
+  margin-bottom:8px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  font-size:1rem;
+  font-weight:700;
+  color:#6B4F3F;
+
+  cursor:pointer;
+  transition:.25s;
+}
+
+.accordion-btn:hover{
+  background:#f2eeea;
+}
+
+.accordion-btn span{
+  font-size:1.15rem;
+}
+
+.accordion-content{
+  display:none;
+  padding:5px 12px 18px;
+}
+
+.accordion-content.active{
+  display:block;
+}
+
+.package-price{
+  text-align:center;
+  font-size:1.8rem;
+  font-weight:700;
+  color:#6B4F3F;
+  margin-top:20px;
+}
+
+/* ==========================================
+   FAQ & POLÍTICAS
+========================================== */
+
+.compact-section{
+  margin-top:20px;
+}
+
+.compact-accordion{
+  border-bottom:1px solid #e6e1db;
+}
+
+.compact-accordion summary{
+  list-style:none;
+  cursor:pointer;
+  padding:12px 0;
+  font-weight:700;
+  color:#3F3F3F;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  font-size:.95rem;
+}
+
+.compact-accordion summary::-webkit-details-marker{
+  display:none;
+}
+
+.compact-accordion summary::after{
+  content:"+";
+  color:#6B4F3F;
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.compact-accordion[open] summary::after{
+  content:"−";
+}
+
+.compact-content{
+  padding-bottom:12px;
+  color:#5A5A5A;
+  font-size:.92rem;
+  line-height:1.55;
+}
+
+.compact-content p{
+  margin:0 0 12px;
+}
+
+.compact-content strong{
+  color:#3F3F3F;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px){
+
+  .container{
+    padding:32px 20px;
+  }
+
+  .profile-photo{
+    width:100%;
+    max-width:320px;
+  }
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  h2{
+    font-size:1.35rem;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+  .accordion-btn{
+    padding:14px 16px;
+    font-size:.95rem;
+  }
+
+  .package-price{
+    font-size:1.6rem;
+  }
+}
   </style>
   
   <link rel="icon" type="image/png" href="image.png.PNG">
@@ -522,16 +693,7 @@ footer {
       </p>
     </section>
 
-    <!-- CONSULTA -->
-    <section class="card fade-up">
-      <h2>Consulta en línea o presencial</h2>
-      <ul>
-        <li>Historia clínica</li>
-        <li>Plan de alimentación personalizado (PDF + App)</li>
-        <li>Análisis de composición corporal (InBody) - Sólo presencial</li>
-        <li>Acompañamiento por WhatsApp</li>
-      </ul>
-    </section>
+
 
     <!-- PARA QUIÉN -->
     <section class="card fade-up">
