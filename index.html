@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Alimentación Inteligente🍒</title>
 
-  <!-- Tipografía -->
+  <!-- Tipografías -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
-    
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="image.png.PNG">
+
   <style>
+
+    /* ==========================
+       ESTILOS GENERALES
+    ========================== */
+
     body {
       margin: 0;
       font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -25,39 +34,16 @@
       padding: 40px 24px;
     }
 
-    /* Logo al final*/
-    .footer-logo {
-  margin-top: 18px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-logo img {
-  width: 64px;          /* pequeño y elegante */
-  opacity: 0.75;        /* discreto */
-}
-
-    /* Foto perfil */
-.profile-photo {
-  width: 350px;              /* un poco más grande */
-  height: auto;              /* natural */
-  border-radius: 0;          /* sin círculo */
-  object-fit: cover;
-  display: block;
-  margin: 6px auto 6px;     /* 👈 menos espacio abajo */
-  box-shadow: none;          /* más orgánico */
-}
     h1 {
-  font-family: 'Fraunces';
-  font-size: 2.6rem;   /* 👈 un poco más pequeño */
-  font-weight: 350;
-  margin-top: 90px;    /* 👈 más espacio arriba */
-  margin-bottom: 0px;
-  text-align: center;
-  line-height: 1;
-  color: #6B4F3F;
-}
+      font-family: 'Fraunces';
+      font-size: 2.6rem;
+      font-weight: 350;
+      margin-top: 90px;
+      margin-bottom: 0;
+      text-align: center;
+      line-height: 1;
+      color: #6B4F3F;
+    }
 
     h2 {
       font-size: 1.5rem;
@@ -67,36 +53,6 @@
       font-weight: 700;
     }
 
-    /* p {
-      font-size: 1rem;
-      margin-bottom: 10px; 
-      text-align: left; 
-    } */ 
-
-    .hero {
-  margin-bottom: 50px;
-  text-align: center;
-  padding-top: 10px;
-}
-
- /* .hero p {
-    font-weight: 500; 
-    text-align: center; 
-    color: #5A5A5A; 
-    font-size: 1.05rem; 
-    max-width: 520px; 
-    margin: 0 auto; 
-    line-height: 1.5; 
-  } */ 
-
-.card {
-  background-color: #ffffff;
-  padding: 28px;
-  border-radius: 8px;
-  margin-top: 30px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-}
-
     ul {
       padding-left: 20px;
     }
@@ -105,207 +61,45 @@
       margin-bottom: 10px;
     }
 
-/* ==========================
-   ACORDEÓN PAQUETES
-========================== */
+    /* ==========================
+       HERO
+    ========================== */
 
-.accordion {
-  margin-top: 20px;
-}
+    .hero {
+      margin-bottom: 50px;
+      text-align: center;
+      padding-top: 10px;
+    }
 
-.accordion-btn {
-  width: 100%;
-  background: #f9f7f4;
-  border: none;
-  border-radius: 10px;
-  padding: 18px 20px;
+    /* ==========================
+       FOTO PERFIL
+    ========================== */
 
-  margin-bottom: 10px;
+    .profile-photo {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      display: block;
+      margin: 6px auto;
+      object-fit: cover;
+    }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    /* ==========================
+       TARJETAS
+    ========================== */
 
-  font-size: 1rem;
-  font-weight: 700;
-  color: #6B4F3F;
+    .card {
+      background-color: #ffffff;
+      padding: 28px;
+      border-radius: 8px;
+      margin-top: 30px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    }
 
-  cursor: pointer;
-  transition: 0.25s;
-}
+    /* ==========================
+       BOTÓN CALENDARIO
+    ========================== */
 
-.accordion-btn:hover {
-  background: #f2eeea;
-}
-
-.accordion-btn span {
-  font-size: 1.2rem;
-}
-
-.accordion-content {
-  display: none;
-  padding: 5px 15px 20px;
-}
-
-.accordion-content.active {
-  display: block;
-}
-
-.package-price {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #6B4F3F;
-  margin-top: 20px;
-}
-
-.featured {
-  background: #f3efe9;
-  border: 1px solid rgba(107,79,63,.12);
-}
-
-.package-highlight{
-  text-align:center;
-  color:#6B4F3F;
-  font-size:0.9rem;
-  font-weight:700;
-  margin:-6px 0 12px;
-}
-
-/* =========================
-   PAQUETE DESTACADO
-=========================
-
-.package-section { 
-  margin-top: 40px; 
-} 
- 
-.package-card { 
-  background: linear-gradient( 
-    180deg, 
-    #ffffff 0%,  
-    #faf8f6 100% 
-  ); 
-
-  border-radius: 18px; 
-  padding: 32px; 
-  max-width: 560px; 
-  margin: 0 auto; 
-
-  text-align: center; 
-
-  box-shadow: 0 12px 35px rgba(0,0,0,0.08); 
-
-  position: relative; 
-  overflow: hidden; 
-} 
- 
-.package-badge { 
-  display: inline-block;  
-
-  background: #7DAA92; 
-  color: white; 
-
-  font-size: 0.8rem; 
-  font-weight: 700; 
-
-  padding: 6px 14px; 
-  border-radius: 999px; 
-
-  margin-bottom: 16px; 
-} 
- 
-.package-card h3 { 
-  margin: 0; 
-  color: #6B4F3F; 
-  font-size: 1.8rem; 
-} 
-
-.package-price { 
-  font-size: 3rem; 
-  font-weight: 700; 
-  color: #6B4F3F; 
-  line-height: 1; 
-
-  margin: 18px 0 10px; 
-}c
-
-.package-price span { 
-  font-size: 1rem; 
-  color: #777; 
-} 
-
-.package-subtitle { 
-  text-align: center; 
-  color: #666; 
-  margin-bottom: 24px; 
-} 
-
-.package-list { 
-  list-style: none; 
-  padding: 0; 
-  margin: 0; 
-
-  text-align: left; 
-} 
-
-.package-list li { 
-  margin-bottom: 14px; 
-  padding-left: 4px; 
-} */
-
-
-/* INFORMACIÓN IMPORTANTE */
-
-.compact-section {
-  margin-top: 30px;
-}
-
-.compact-accordion {
-  border-bottom: 1px solid #e6e1db;
-}
-
-.compact-accordion summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 14px 0;
-  font-weight: 700;
-  color: #3F3F3F;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.compact-accordion summary::-webkit-details-marker {
-  display: none;
-}
-
-.compact-accordion summary::after {
-  content: "+";
-  color: #6B4F3F;
-  font-size: 1.2rem;
-}
-
-.compact-accordion[open] summary::after {
-  content: "−";
-}
-
-.compact-content {
-  padding-bottom: 14px;
-  color: #5A5A5A;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.compact-content p {
-  margin: 0 0 14px;
-}
-
-.compact-content strong {
-  color: #3F3F3F;
-}
-
-    /* Botón calendario */
     .calendar-link {
       display: inline-block;
       padding: 14px 26px;
@@ -315,6 +109,7 @@
       border-radius: 8px;
       font-weight: 700;
       font-size: 1rem;
+      transition: .25s;
     }
 
     .calendar-link:hover {
@@ -328,341 +123,339 @@
       margin-top: 8px;
     }
 
-    /* Botón WhatsApp */
-    .whatsapp-button {
+    /* ==========================
+       ACORDEÓN PAQUETES
+    ========================== */
+
+    .accordion {
+      margin-top: 20px;
+    }
+
+    .accordion-btn {
+      width: 100%;
+      background: #f9f7f4;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 8px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 1rem;
+      font-weight: 700;
+      color: #6B4F3F;
+
+      cursor: pointer;
+      transition: .25s;
+    }
+
+    .accordion-btn:hover {
+      background: #f2eeea;
+    }
+
+    .accordion-btn span {
+      font-size: 1.15rem;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 5px 12px 18px;
+    }
+
+    .accordion-content.active {
+      display: block;
+    }
+
+    .featured {
+      background: #f3efe9;
+      border: 1px solid rgba(107,79,63,.12);
+    }
+
+    .package-highlight {
+      color: #6B4F3F;
+      font-size: .85rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .package-price {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #6B4F3F;
+      margin-top: 20px;
+    }
+
+    /* ==========================
+       TESTIMONIOS
+    ========================== */
+
+    .testimonial-carousel {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 10px 0 5px;
+      margin-bottom: 10px;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonial-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .testimonial-card {
+      min-width: 240px;
+      max-width: 240px;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      scroll-snap-align: center;
+      flex-shrink: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial-text {
+      font-size: .92rem;
+      color: #444;
+      font-style: italic;
+      text-align: center;
+      line-height: 1.5;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .testimonial-name {
+      font-size: .85rem;
+      font-weight: 700;
+      color: #6B4F3F;
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    /* ==========================
+       FAQ & POLÍTICAS
+    ========================== */
+
+    .compact-section {
+      margin-top: 20px;
+    }
+
+    .compact-accordion {
+      border-bottom: 1px solid #e6e1db;
+    }
+
+    .compact-accordion summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 12px 0;
+      font-weight: 700;
+      color: #3F3F3F;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .compact-accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .compact-accordion summary::after {
+      content: "+";
+      color: #6B4F3F;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .compact-accordion[open] summary::after {
+      content: "−";
+    }
+
+    .compact-content {
+      padding-bottom: 12px;
+      color: #5A5A5A;
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+
+    .compact-content p {
+      margin: 0 0 12px;
+    }
+
+    /* ==========================
+       FRASE FINAL
+    ========================== */
+
+    .quote {
+      max-width: 520px;
+      margin: 50px auto 24px;
+      text-align: center;
+      font-style: italic;
+      color: #5A5A5A;
+      font-size: .95rem;
+      line-height: 1.6;
+    }
+
+    .quote span {
+      display: inline;
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+
+    .quote span.show {
+      opacity: 1;
+    }
+
+    /* ==========================
+       BOTONES
+    ========================== */
+
+    .final-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-button,
+    .instagram-button {
       padding: 14px 26px;
-      background-color: #7DAA92;
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-size: 1rem;
       font-weight: 700;
       text-align: center;
       min-width: 220px;
+      transition: .25s;
+    }
+
+    .whatsapp-button {
+      background-color: #7DAA92;
     }
 
     .whatsapp-button:hover {
       background-color: #6a9a82;
     }
 
-    /* Botón Instagram */
     .instagram-button {
-      padding: 14px 26px;
       background-color: #6B4F3F;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      text-align: center;
-      min-width: 220px;
     }
 
     .instagram-button:hover {
       background-color: #5a4133;
     }
 
-/* Animación scroll */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
+    /* ==========================
+       FOOTER
+    ========================== */
 
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+    footer {
+      margin-top: 0;
+      padding-top: 10px;
+      font-size: .9rem;
+      color: #5A5A5A;
+      text-align: center;
+    }
 
-
-    /* Frase antes de botones */
-.quote {
-  max-width: 520px;       /* 👈 controla el ancho del texto */
-  margin: 50px auto 24px;
-  text-align: center;
-  font-style: italic;
-  color: #5A5A5A;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.quote span {
-  display: inline;        /* 👈 CLAVE */
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.quote span.show {
-  opacity: 1;
-}
-
-/* Contenedor de botones finales */
-.final-actions {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 40px; /* 👈 espacio ANTES del footer */
-  flex-wrap: wrap;
-}
-
-
-  
-  .testimonial-carousel {
-  display: flex;
-  justify-content: center;   /* 👈 CENTRA todo el carrusel */
-  gap: 16px;
-  overflow-x: auto;
-  padding: 10px 0 5px;       /* 👈 menos espacio abajo */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-
-  scroll-padding: 20px;
-}
-
-/* oculta scrollbar */
-.testimonial-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.testimonial-card {
-  min-width: 240px;
-  max-width: 240px;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 18px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  scroll-snap-align: center;
-  flex-shrink: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.testimonial-text {
-  font-size: 0.92rem;
-  color: #444;
-  font-style: italic;
-  text-align: center;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  line-height: 1.5;
-}
-
-.testimonial-name {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #6B4F3F;
-  margin-top: 10px;
-  text-align: right;
-  display: block;
-}
-
-/* Footer */
-footer {
-  margin-top: 0; /* ya no depende de botones */
-  padding-top: 10px;
-  font-size: 0.9rem;
-  color: #5A5A5A;
-  text-align: center;
-}
-    
     .footer-copy {
-  margin-top: 20px; /* separación con la frase */
-}
+      margin-top: 20px;
+    }
 
-.footer-address {
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #6A6A6A;
-  line-height: 1.4;
-}
-.footer-logo {
-  text-align: center;
-  margin-bottom: 30px;
-}
+    .footer-address {
+      margin-top: 8px;
+      font-size: .85rem;
+      color: #6A6A6A;
+      line-height: 1.4;
+    }
 
-.footer-logo img {
-  max-width: 90px;
-  opacity: 0.85;
-}
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+      margin-bottom: 30px;
+    }
 
-/* ==========================================
-   AJUSTES FINALES WEB NUTRI ARELY
-========================================== */
+    .footer-logo img {
+      width: 80px;
+      opacity: .85;
+    }
 
-/* Badge paquete SMART */
+    /* ==========================
+       ANIMACIONES
+    ========================== */
 
-.package-badge-small{
-  display:inline-block;
-  background:#7DAA92;
-  color:#fff;
-  font-size:.72rem;
-  font-weight:700;
-  padding:4px 10px;
-  border-radius:999px;
-  margin-left:8px;
-  vertical-align:middle;
-  line-height:1.2;
-}
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
 
-/* Mantener destacado el SMART */
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-.featured{
-  background:#f3efe9;
-  border:1px solid rgba(107,79,63,.12);
-}
+    /* ==========================
+       RESPONSIVE
+    ========================== */
 
-/* ==========================================
-   ACORDEÓN PAQUETES
-========================================== */
+    @media (max-width: 768px) {
 
-.accordion{
-  margin-top:20px;
-}
+      .container {
+        padding: 32px 20px;
+      }
 
-.accordion-btn{
-  width:100%;
-  background:#f9f7f4;
-  border:none;
-  border-radius:10px;
-  padding:16px 18px;
-  margin-bottom:8px;
+      h1 {
+        font-size: 2.2rem;
+      }
 
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+      h2 {
+        font-size: 1.35rem;
+      }
 
-  font-size:1rem;
-  font-weight:700;
-  color:#6B4F3F;
+      .card {
+        padding: 22px;
+      }
 
-  cursor:pointer;
-  transition:.25s;
-}
+      .accordion-btn {
+        padding: 14px 16px;
+        font-size: .95rem;
+      }
 
-.accordion-btn:hover{
-  background:#f2eeea;
-}
+      .package-price {
+        font-size: 1.6rem;
+      }
 
-.accordion-btn span{
-  font-size:1.15rem;
-}
+      .final-actions {
+        flex-direction: column;
+        align-items: center;
+      }
 
-.accordion-content{
-  display:none;
-  padding:5px 12px 18px;
-}
+      .whatsapp-button,
+      .instagram-button,
+      .calendar-link {
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+      }
+    }
 
-.accordion-content.active{
-  display:block;
-}
-
-.package-price{
-  text-align:center;
-  font-size:1.8rem;
-  font-weight:700;
-  color:#6B4F3F;
-  margin-top:20px;
-}
-
-/* ==========================================
-   FAQ & POLÍTICAS
-========================================== */
-
-.compact-section{
-  margin-top:20px;
-}
-
-.compact-accordion{
-  border-bottom:1px solid #e6e1db;
-}
-
-.compact-accordion summary{
-  list-style:none;
-  cursor:pointer;
-  padding:12px 0;
-  font-weight:700;
-  color:#3F3F3F;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  font-size:.95rem;
-}
-
-.compact-accordion summary::-webkit-details-marker{
-  display:none;
-}
-
-.compact-accordion summary::after{
-  content:"+";
-  color:#6B4F3F;
-  font-size:1.1rem;
-  font-weight:700;
-}
-
-.compact-accordion[open] summary::after{
-  content:"−";
-}
-
-.compact-content{
-  padding-bottom:12px;
-  color:#5A5A5A;
-  font-size:.92rem;
-  line-height:1.55;
-}
-
-.compact-content p{
-  margin:0 0 12px;
-}
-
-.compact-content strong{
-  color:#3F3F3F;
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width: 768px){
-
-  .container{
-    padding:32px 20px;
-  }
-
-  .profile-photo{
-    width:100%;
-    max-width:320px;
-  }
-
-  h1{
-    font-size:2.2rem;
-  }
-
-  h2{
-    font-size:1.35rem;
-  }
-
-  .card{
-    padding:22px;
-  }
-
-  .accordion-btn{
-    padding:14px 16px;
-    font-size:.95rem;
-  }
-
-  .package-price{
-    font-size:1.6rem;
-  }
-}
   </style>
-  
+
   <link rel="icon" type="image/png" href="image.png.PNG">
   
 </head>
@@ -670,404 +463,256 @@ footer {
 <body>
   <div class="container">
 
+  <!-- HERO -->
+  <section class="hero fade-up">
+    <h1>Alimentación Inteligente</h1>
+  </section>
 
-    <!-- HERO -->
-    <section class="hero fade-up">
-      <h1>Alimentación Inteligente</h1>
-      <!-- <p>Nutrición sin culpa, con acompañamiento real.</p> -->
-    </section>
+  <!-- FOTO + QUIÉN SOY -->
+  <section>
+    <img src="foto.png" alt="Nutri Arely + Leia" class="profile-photo fade-up">
 
-    <!-- FOTO + QUIÉN SOY -->
-    <section>
-      <img src="foto.png" alt="Nutri Arely + Leia" class="profile-photo fade-up">
-      <h2>Hola, soy Nutri Arely🍒</h2>
-      <p>
-        Te cuento un poco sobre mi. 
-        Estudié Nutrición en la UANL y posteriormente una ingeniería en Sistemas👩🏻‍💻. 
-        Me gusta visitar cafeterías y trabajar tomando
-        un buen café con pan, porque sí, también se puede.
-      </p>
-      <p>
-        Mi objetivo como nutrióloga es ayudarte a conocer los beneficios de cada alimento,
-        aprender a balancear tus comidas y construir una relación más consciente con la comida.
-      </p>
-    </section>
+    <h2>Hola, soy Nutri Arely🍒</h2>
 
-
-
-    <!-- PARA QUIÉN -->
-    <section class="card fade-up">
-      <h2>Este lugar es para ti sí…</h2>
-      <ul>
-        <li>Te cansaste de empezar y abandonar dietas</li>
-        <li>Quieres mejorar tu relación con la comida</li>
-        <li>Buscas acompañamiento sin culpa</li>
-        <li>Quieres aprender a comer de forma sostenible</li>
-      </ul>
-    </section>
-
-    <!-- CTA -->
-    <section class="card fade-up">
-      <h2>📲 Agenda tu consulta</h2>
-      <p>
-        Reserva tu cita con anticipación.
-        Tu espacio se confirma una vez realizado el anticipo según la modalidad que elijas.
-      </p>
-
-      <div style="text-align:center; margin-top:20px;">
-        <a
-          href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true"
-          target="_blank"
-          rel="noopener"
-          class="calendar-link"
-        >
-          Ver disponibilidad 🗓️
-        </a>
-
-        <p class="calendar-note">
-          Se abrirá el calendario de Google en una nueva ventana.
-        </p>
-      </div>
-    </section>
-    
-    <!-- PAQUETES -->
-<section class="card fade-up">
-  <h2>Servicios y paquetes</h2>
-
-  <div class="accordion">
-
-    <!-- CONSULTA INDIVIDUAL -->
-    <button class="accordion-btn">
-      Consulta Individual
-      <span>+</span>
-    </button>
-
-    <div class="accordion-content">
-      <p><strong>Modalidad presencial o virtual</strong></p>
-
-      <ul>
-        <li>Historia clínica y evaluación nutricional.</li>
-        <li>Plan de alimentación personalizado.</li>
-        <li>Interpretación de análisis bioquímicos.</li>
-        <li>Acceso a la app de seguimiento por 3 semanas.</li>
-        <li>Resolución de dudas por WhatsApp.</li>
-        <li>Análisis de composición corporal con InBody. (Sólo presencial).
-      </ul>
-
-     <!-- <p><strong>📍 Presencial</strong></p>
-      <ul>
-        <li>Consulta en consultorio.</li>
-        <li>Análisis de composición corporal con InBody.</li>
-      </ul>
-
-      <p><strong>💻 Virtual</strong></p>
-      <ul>
-        <li>Consulta por videollamada.</li>
-        <li>Evaluación mediante información y registros proporcionados durante la consulta.</li>
-      </ul> -->
-
-      <p class="package-price">$500 - $650 MXN</p>
-    </div>
-
-    <!-- PAQUETE MENSUAL -->
-    <button class="accordion-btn featured">
-      Paquete SMART
-      <p class="package-highlight"> 🔥 </p>
-    
-      <span>+</span>
-    </button>
-
-    <div class="accordion-content">
-      <p>
-        Paga en una sola exhibición y obtén hasta 4 consultas durante un mes.
-      </p>
-
-      <ul>
-        <li>Primera consulta presencial con bioimpedancia.</li>
-        <li>Hasta 3 seguimientos virtuales.</li>
-        <li>Atención por WhatsApp todo el mes.</li>
-        <li>Acceso a la App de seguimiento por 1 mes.</li>
-        <li>Kit de acompañamiento.</li>
-        <li>Recomendaciones personalizadas según diagnóstico y objetivos.</li>
-      </ul>
-
-      <p class="package-price">$850 MXN</p>
-    </div>
-
-    <!-- PAQUETE PAREJA -->
-    <button class="accordion-btn">
-      Paquete Pareja
-      <span>+</span>
-    </button>
-
-    <div class="accordion-content">
-      <p>
-        Ideal para parejas, amigos o familiares que desean construir hábitos juntos.
-      </p>
-
-      <ul>
-        <li>Consulta inicial por separado.</li>
-        <li>Plan personalizado para cada integrante.</li>
-        <li>Seguimiento por separado.</li>
-        <li>Material educativo compartido.</li>
-        <li>Estrategias para organizar comidas en conjunto.</li>
-      </ul>
-
-      <p class="package-price">$1,500 MXN</p>
-    </div>
-
-    <!-- PAQUETE TRIMESTRAL 
-    <button class="accordion-btn">
-     Paquete Trimestral
-      <span>+</span>
-    </button>
-
-    <div class="accordion-content">
-      <p>
-        Para quienes desean trabajar sus hábitos de forma continua y con mayor acompañamiento.
-      </p>
-
-      <ul>
-        <li>12 semanas de seguimiento.</li>
-        <li>Consultas programadas.</li>
-        <li>Ajustes continuos según progreso.</li>
-        <li>Material educativo adicional.</li>
-        <li>Ahorro respecto al pago individual.</li>
-      </ul>
-
-      <p class="package-price">$2,100 MXN</p>
-    </div> -->
-
-  </div>
-</section>
-    
-<!-- PAQUETES
-<section class="package-section fade-up">
-  <h2>✨ Paquetes</h2>
-
-  <div class="package-card">
-    <div class="package-badge">Más popular</div>
-
-    <h3>Paquete Mensual</h3>
-
-    <div class="package-price">
-      $850 <span>MXN</span>
-    </div>
-
-    <p class="package-subtitle">
-      Hasta 4 consultas durante un mes.
+    <p>
+      Soy licenciada en Nutrición por la UANL y también ingeniera en Sistemas.
+      Me encanta visitar cafeterías, tomar un buen café con pan y demostrar que una alimentación saludable también puede disfrutarse.
     </p>
 
-    <ul class="package-list">
-      <li>📍 Primera consulta presencial con bioimpedancia</li>
-      <li>💻 Hasta 3 seguimientos virtuales</li>
-      <li>📖 Recetario de snacks acorde a tus objetivos</li>
-      <li>📲 Atención por WhatsApp todo el mes en horario establecido</li>
-      <li>🎯 Recomendaciones personalizadas según diagnóstico y objetivos</li>
-    </ul>
-  </div> 
-</section> -->
+    <p>
+      Mi objetivo es ayudarte a construir hábitos sostenibles, mejorar tu relación con la comida y alcanzar tus metas sin culpa ni restricciones innecesarias.
+    </p>
+  </section>
 
-<!-- TESTIMONIOS -->
+  <!-- PARA QUIÉN -->
   <section class="card fade-up">
-  <h2>💬 Opiniones </h2>
+    <h2>Este lugar es para ti sí…</h2>
+    <ul>
+      <li>Te cansaste de empezar dietas cada lunes</li>
+      <li>Quieres mejorar tu relación con la comida</li>
+      <li>Buscas acompañamiento sin juicios</li>
+      <li>Quieres aprender a comer de forma sostenible</li>
+      <li>Buscas una estrategia adaptada a tu estilo de vida</li>
+    </ul>
+  </section>
 
-  <div class="testimonial-carousel">
+  <!-- SERVICIOS Y PAQUETES (ANTES DEL CTA) -->
+  <section class="card fade-up">
+    <h2>Servicios y paquetes</h2>
 
-  <!--  <div class="testimonial-card">
-      <p class="testimonial-text">
-        “Me ayudó a dejar las dietas restrictivas y aprender a comer sin culpa.”
-      </p>
-      <span class="testimonial-name">Anónimo</span>
+    <div class="accordion">
+
+      <!-- CONSULTA INDIVIDUAL -->
+      <button class="accordion-btn">
+        Consulta Individual
+        <span>+</span>
+      </button>
+
+      <div class="accordion-content">
+        <p><strong>Modalidad presencial o virtual</strong></p>
+
+        <ul>
+          <li>Historia clínica y evaluación nutricional.</li>
+          <li>Plan de alimentación personalizado.</li>
+          <li>Interpretación de análisis bioquímicos.</li>
+          <li>Acceso a la app de seguimiento por 3 semanas.</li>
+          <li>Resolución de dudas por WhatsApp.</li>
+          <li>Análisis de composición corporal con InBody (solo presencial).</li>
+        </ul>
+
+        <p class="package-price">$500 - $650 MXN</p>
+      </div>
+
+      <!-- SMART -->
+      <button class="accordion-btn featured">
+        Paquete SMART
+        <span class="package-badge-small">Más popular</span>
+        <span>+</span>
+      </button>
+
+      <div class="accordion-content">
+        <p>Paga en una sola exhibición y obtén hasta 4 consultas durante un mes.</p>
+
+        <ul>
+          <li>Primera consulta presencial con bioimpedancia.</li>
+          <li>Hasta 3 seguimientos virtuales.</li>
+          <li>Atención por WhatsApp todo el mes.</li>
+          <li>Acceso a la app de seguimiento por 1 mes.</li>
+          <li>Kit de acompañamiento.</li>
+          <li>Recomendaciones personalizadas según diagnóstico.</li>
+        </ul>
+
+        <p class="package-price">$850 MXN</p>
+      </div>
+
+      <!-- PAREJA -->
+      <button class="accordion-btn">
+        Paquete Pareja
+        <span>+</span>
+      </button>
+
+      <div class="accordion-content">
+        <p>Ideal para parejas, amigos o familiares que desean construir hábitos juntos.</p>
+
+        <ul>
+          <li>Consulta inicial por separado.</li>
+          <li>Plan personalizado para cada integrante.</li>
+          <li>Seguimiento por separado.</li>
+          <li>Material educativo compartido.</li>
+        </ul>
+
+        <p class="package-price">$1,500 MXN</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="testimonial-card">
-      <p class="testimonial-text">
-        “Me ayudó a dejar las dietas restrictivas y aprender a comer sin culpa.”
+  <!-- CTA -->
+  <section class="card fade-up">
+    <h2>📲 Agenda tu consulta</h2>
+
+    <p>
+      Reserva tu cita con anticipación.
+      Tu espacio se confirma una vez realizado el anticipo según la modalidad que elijas.
+    </p>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a
+        href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3VmtlLDj1es5DC6hiy1dwVV5J-nH669NUHVbn8i29EPfNzQwrdqzR_9jibxXeMugOAgOfsDt6B?gv=true"
+        target="_blank"
+        rel="noopener"
+        class="calendar-link"
+      >
+        Ver disponibilidad 🗓️
+      </a>
+
+      <p class="calendar-note">
+        Se abrirá el calendario en una nueva ventana.
       </p>
-      <span class="testimonial-name">Anónimo</span>
     </div>
--->
-  </div>
-</section>
-<style>
-  .testimonial-carousel {
-    margin-bottom: 10px; /* 👈 reduce espacio visual */
-  }
-</style>
+  </section>
 
-<section class="fade-up compact-section">
+  <!-- TESTIMONIOS -->
+  <section class="card fade-up">
+    <h2>💬 Opiniones</h2>
 
-  <h2>FAQ & Políticas</h2>
+    <div class="testimonial-carousel">
+      <!-- agregar testimonios aquí -->
+    </div>
+  </section>
 
   <!-- FAQ -->
-  <details class="compact-accordion">
-    <summary>Preguntas frecuentes</summary>
+  <section class="fade-up compact-section">
+    <h2>FAQ & Políticas</h2>
 
-    <div class="compact-content">
+    <details class="compact-accordion">
+      <summary>Preguntas frecuentes</summary>
+      <div class="compact-content">
 
-      <p>
-        <strong>¿Con qué frecuencia debo agendar consulta?</strong><br>
-        Lo ideal es realizar seguimientos cada 2-4 semanas, dependiendo de tu objetivo y progreso. Esto nos permite realizar ajustes oportunos y mantener la motivación.
-      </p>
+        <p><strong>¿Con qué frecuencia debo agendar consulta?</strong><br>
+        Cada 2-4 semanas dependiendo del objetivo.</p>
 
-      <p>
-        <strong>¿Qué pasa si no cumplo al 100% mi plan?</strong><br>
-        No te desanimes ni descuides el seguimiento si no cumpliste el plan anterior. Lo importante es identificar obstáculos, aprender de ellos y seguir adelante con una estrategia que se adapte mejor a ti.
-      </p>
+        <p><strong>¿Cómo me entregas mi plan?</strong><br>
+        En PDF y en la app de seguimiento.</p>
 
-      <p>
-        <strong>¿Cómo me entregas mi plan?</strong><br>
-        El plan de alimentación y material extra se entrega por el medio de comunicación que elijas como PDF y se carga en la App de seguimiento..
-      </p>
+      </div>
+    </details>
 
-      <p>
-        <strong>¿Hay un horario para recibir atención por WhatsApp?</strong><br>
-        El horario de atención es de lunes a sábado. Si existe algún cambio por motivos extraordinarios, te lo haré saber con anticipación.
-      </p>
+    <details class="compact-accordion">
+      <summary>Políticas de consulta</summary>
+      <div class="compact-content">
 
-    </div>
-  </details>
+        <p>Cancelaciones con 24 horas de anticipación.</p>
+        <p>Información confidencial.</p>
 
-  <!-- POLÍTICAS -->
-  <details class="compact-accordion">
-    <summary>Políticas de consulta</summary>
+      </div>
+    </details>
+  </section>
 
-    <div class="compact-content">
+  <!-- FRASE -->
+  <p class="quote type-words">
+    “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
+  </p>
 
-      <p>
-        En caso de que necesites reprogramar tu cita, te pido que lo hagas con al menos 24 horas de anticipación. De lo contrario, se considerará como consulta tomada y deberá realizarse nuevamente el pago correspondiente.
-      </p>
+  <!-- BOTONES -->
+  <div class="final-actions fade-up">
+    <a href="https://api.whatsapp.com/send?phone=5218120004821" class="whatsapp-button">
+      WhatsApp 💬
+    </a>
 
-      <p>
-        Tu información será tratada con absoluta confidencialidad, respetando la ética profesional y la normativa de protección de datos personales.
-      </p>
-
-      <p>
-        El plan de alimentación y el material adicional están diseñados específicamente para tu caso, por lo que no deben compartirse ni reproducirse para otros fines.
-      </p>
-
-      <p>
-        Las dudas breves serán respondidas con gusto por WhatsApp o correo. Si requieres ajustes importantes o tienes una situación más compleja, te sugiero agendar una nueva consulta para brindarte el seguimiento adecuado.
-      </p>
-
-    </div>
-  </details>
-
-</section>
-    
-     <!-- FRASE -->
-    <p class="quote type-words">
-      “Sin culpa y sin modas, que tu dieta se base en una Alimentación Inteligente.”
-    </p>
-
-    <!-- BOTONES FINALES -->
-    <div class="final-actions fade-up">
-      <a
-        href="https://api.whatsapp.com/send?phone=5218120004821&text=Hola%2C%20quiero%20agendar%20una%20consulta%20%F0%9F%8D%8F"
-        target="_blank"
-        class="whatsapp-button"
-      >
-        WhatsApp 💬
-      </a>
-
-      <a
-        href="https://www.instagram.com/nutri.arelydelacruz?igsh=ZXI3bmNwMDU5ZDZo"
-        target="_blank"
-        class="instagram-button"
-      >
-        Instagram ✨
-      </a>
-    </div>
-
-
-  
-
-<footer>
-  <div class="footer-address">
-    Av. Dr. Eleuterio Gonzalez 914, Segundo piso. <br>
-    Monterrey, NL.
+    <a href="https://www.instagram.com/nutri.arelydelacruz" class="instagram-button">
+      Instagram ✨
+    </a>
   </div>
-  
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-address">
+      Av. Dr. Eleuterio González 914, Segundo Piso<br>
+      Monterrey, Nuevo León
+    </div>
+
     <div class="footer-copy">
-    © 2026 · Alimentación Inteligente
+      © 2026 · Alimentación Inteligente
+    </div>
+  </footer>
+
+  <div class="footer-logo fade-up">
+    <img src="image.png.PNG" alt="Logo">
   </div>
 
-</footer>
-<div class="footer-logo fade-up">
-  <img src="image.png.PNG" alt="Logo Alimentación Inteligente">
 </div>
 
-
-</div>
-
+<!-- SCRIPTS -->
 <script>
-  const fadeElements = document.querySelectorAll('.fade-up');
+const fadeElements = document.querySelectorAll('.fade-up');
 
-  const fadeObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        } else {
-          entry.target.classList.remove('show');
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  fadeElements.forEach(el => fadeObserver.observe(el));
-</script>
-
-<script>
-  const quote = document.querySelector('.type-words');
-  const originalText = quote.textContent;
-  quote.textContent = '';
-
-  const words = originalText.match(/\S+\s*/g);
-
-  words.forEach(word => {
-    const span = document.createElement('span');
-    span.textContent = word;
-    quote.appendChild(span);
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('show', entry.isIntersecting);
   });
+}, { threshold: 0.3 });
 
-  const spans = quote.querySelectorAll('span');
-
-  const quoteObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        spans.forEach((span, index) => {
-          setTimeout(() => {
-            span.classList.add('show');
-          }, index * 160);
-        });
-      } else {
-        spans.forEach(span => span.classList.remove('show'));
-      }
-    });
-  }, { threshold: 0.4 });
-
-  quoteObserver.observe(quote);
+fadeElements.forEach(el => fadeObserver.observe(el));
 </script>
 
 <script>
-document.querySelectorAll('.accordion-btn').forEach(button => {
+const quote = document.querySelector('.type-words');
+const text = quote.textContent;
+quote.textContent = '';
 
-  button.addEventListener('click', () => {
+text.split(' ').forEach(word => {
+  const span = document.createElement('span');
+  span.textContent = word + ' ';
+  quote.appendChild(span);
+});
 
-    const content = button.nextElementSibling;
+const spans = quote.querySelectorAll('span');
 
-    document.querySelectorAll('.accordion-content').forEach(item => {
-      if(item !== content){
-        item.classList.remove('active');
-      }
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    spans.forEach((s, i) => {
+      setTimeout(() => {
+        s.classList.toggle('show', entry.isIntersecting);
+      }, i * 120);
+    });
+  });
+}, { threshold: 0.4 });
+
+observer.observe(quote);
+</script>
+
+<script>
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+
+    document.querySelectorAll('.accordion-content').forEach(c => {
+      if (c !== content) c.classList.remove('active');
     });
 
     content.classList.toggle('active');
   });
-
 });
 </script>
 
