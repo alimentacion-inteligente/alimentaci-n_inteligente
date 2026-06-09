@@ -937,73 +937,80 @@ fadeElements.forEach(el => fadeObserver.observe(el));
 
 <script>
 const quote = document.querySelector('.type-words');
-const text = quote.textContent;
-quote.textContent = '';
 
-text.split(' ').forEach(word => {
-  const span = document.createElement('span');
-  span.textContent = word + ' ';
-  quote.appendChild(span);
-});
+if (quote) {
 
-const spans = quote.querySelectorAll('span');
+  const text = quote.textContent;
+  quote.textContent = '';
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    spans.forEach((s, i) => {
-      setTimeout(() => {
-        s.classList.toggle('show', entry.isIntersecting);
-      }, i * 120);
-    });
+  text.split(' ').forEach(word => {
+    const span = document.createElement('span');
+    span.textContent = word + ' ';
+    quote.appendChild(span);
   });
-}, { threshold: 0.4 });
 
-observer.observe(quote);
+  const spans = quote.querySelectorAll('span');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+
+      spans.forEach((s, i) => {
+        setTimeout(() => {
+          s.classList.toggle('show', entry.isIntersecting);
+        }, i * 120);
+      });
+
+    });
+  }, { threshold: 0.4 });
+
+  observer.observe(quote);
+
+}
 </script>
 
 <script>
+
+// ==========================
+// PAQUETES
+// ==========================
+
 document.querySelectorAll('.accordion-btn').forEach(btn => {
 
   btn.addEventListener('click', () => {
 
     const content = btn.nextElementSibling;
+    const isOpen = content.classList.contains('active');
 
-    document.querySelectorAll('.accordion-btn').forEach(otherBtn => {
-      if(otherBtn !== btn){
-        otherBtn.classList.remove('active');
-        otherBtn.querySelector('span').textContent = '+';
-      }
-    });
-
-    document.querySelectorAll('.accordion-content').forEach(otherContent => {
-      if(otherContent !== content){
-        otherContent.classList.remove('active');
-      }
-    });
-
-    content.classList.toggle('active');
-    btn.classList.toggle('active');
-
-    btn.querySelector('span').textContent =
-      content.classList.contains('active') ? '−' : '+';
-
-  });
-
-});
-</script>
-
-document.querySelectorAll('.accordion-btn').forEach(btn => {
-
-  btn.addEventListener('click', () => {
-
-    // Cierra FAQ y Políticas
+    // Cerrar FAQ y Políticas
     document.querySelectorAll('.compact-accordion').forEach(item => {
       item.removeAttribute('open');
     });
 
+    // Cerrar todos los paquetes
+    document.querySelectorAll('.accordion-content').forEach(c => {
+      c.classList.remove('active');
+    });
+
+    document.querySelectorAll('.accordion-btn').forEach(b => {
+      b.classList.remove('active');
+      b.querySelector('span').textContent = '+';
+    });
+
+    // Abrir solo si estaba cerrado
+    if (!isOpen) {
+      content.classList.add('active');
+      btn.classList.add('active');
+      btn.querySelector('span').textContent = '−';
+    }
+
   });
 
 });
+
+
+// ==========================
+// FAQ Y POLÍTICAS
+// ==========================
 
 document.querySelectorAll('.compact-accordion').forEach(item => {
 
@@ -1011,7 +1018,7 @@ document.querySelectorAll('.compact-accordion').forEach(item => {
 
     if (item.open) {
 
-      // Cierra todos los paquetes
+      // Cerrar paquetes
       document.querySelectorAll('.accordion-content').forEach(content => {
         content.classList.remove('active');
       });
@@ -1021,7 +1028,7 @@ document.querySelectorAll('.compact-accordion').forEach(item => {
         btn.querySelector('span').textContent = '+';
       });
 
-      // Cierra el otro FAQ si está abierto
+      // Cerrar otros FAQ
       document.querySelectorAll('.compact-accordion').forEach(other => {
         if (other !== item) {
           other.removeAttribute('open');
@@ -1033,6 +1040,7 @@ document.querySelectorAll('.compact-accordion').forEach(item => {
   });
 
 });
+
 </script>
 
 </body>
