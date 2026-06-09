@@ -239,53 +239,64 @@
 
 /* PRECIOS */
 
+/* ==========================
+   CAJAS DE PRECIOS
+========================== */
+
 .price-options {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin: 18px 0 24px;
+}
 
-  margin-top: 24px;
+/* Virtual */
+
+.price-box:first-child {
+  background: #DDEADF; /* verde salvia claro */
+  border: 1px solid rgba(125,170,146,.20);
+}
+
+/* Presencial */
+
+.price-box:last-child {
+  background: #EFE8E0; /* beige cálido */
+  border: 1px solid rgba(107,79,63,.10);
 }
 
 .price-box {
-  background: #ffffff;
-
-  border: 1px solid rgba(107,79,63,.08);
-  border-radius: 12px;
-
-  min-width: 130px;
-
-  padding: 14px 20px;
-
+  border-radius: 10px;
+  padding: 10px 18px;
+  min-width: 115px;
   text-align: center;
-
-  transition: .25s;
-}
-
-.price-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107,79,63,.08);
 }
 
 .price-label {
   display: block;
-
-  font-size: .82rem;
+  font-size: .80rem;
   font-weight: 600;
-
-  color: #8A8178;
-
-  margin-bottom: 4px;
+  color: rgba(107,79,63,.75);
+  margin-bottom: 2px;
 }
 
 .price-value {
   display: block;
-
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
-
   color: #6B4F3F;
+  line-height: 1.1;
+}
+
+/* Precio del paquete acompañamiento */
+
+.package-price {
+  text-align: center;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #7DAA92;
+  margin-top: 18px;
+  margin-bottom: 6px;
 }
 
 /* PRECIO PAQUETE */
