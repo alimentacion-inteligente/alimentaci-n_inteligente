@@ -123,41 +123,21 @@
       margin-top: 8px;
     }
 
-    /* ==========================
-       ACORDEÓN PAQUETES
-    ========================== */
+ /* ==========================
+   ACORDEÓN PAQUETES
+========================== */
 
-    .accordion {
-      margin-top: 20px;
-    }
+.accordion {
+  margin-top: 24px;
+}
 
-    .accordion-btn {
-      width: 100%;
-      background: #f9f7f4;
-      border: none;
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin-bottom: 8px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      font-size: 1rem;
-      font-weight: 700;
-      color: #6B4F3F;
-
-      cursor: pointer;
-      transition: .25s;
-    }
-
-    .accordion-btn {
+.accordion-btn {
   width: 100%;
   background: #f9f7f4;
   border: none;
   border-radius: 10px;
   padding: 16px 18px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 
   display: flex;
   justify-content: space-between;
@@ -168,75 +148,95 @@
   color: #6B4F3F;
 
   cursor: pointer;
-
   transition: all .25s ease;
 }
 
 .accordion-btn:hover,
 .accordion-btn.active {
-  background: #f2eeea;
+  background: #efe8e0;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(107,79,63,.10);
 }
 
-    .accordion-btn span {
-      font-size: 1.15rem;
-    }
+.accordion-btn span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6B4F3F;
+}
 
-    .accordion-content {
-      display: none;
-      padding: 5px 12px 18px;
-    }
+.accordion-content {
+  display: none;
+  padding: 8px 12px 12px;
+  margin-bottom: 20px;
+}
 
-    .accordion-content.active {
-      display: block;
-    }
+.accordion-content.active {
+  display: block;
+}
 
-    .featured {
-      background: #f3efe9;
-      border: 1px solid rgba(107,79,63,.12);
-    }
+/* PAQUETES DESTACADOS */
 
-    .package-highlight {
-      color: #6B4F3F;
-      font-size: .85rem;
-      font-weight: 700;
-      margin: 0;
-    }
+.featured {
+  background: #f3efe9;
+  border: 1px solid rgba(107,79,63,.12);
+}
 
-    .package-price {
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #6B4F3F;
-      margin-top: 20px;
-    }
-    
-    .price-options {
+.package-highlight {
+  color: #6B4F3F;
+  font-size: .85rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* PRECIO SMART */
+
+.package-price {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #6B4F3F;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+/* CAJAS DE PRECIOS */
+
+.price-options {
   display: flex;
   justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin: 22px 0 30px;
 }
 
 .price-box {
   background: #f7f3ee;
-  padding: 12px 18px;
+  border: 1px solid rgba(107,79,63,.08);
   border-radius: 10px;
+
+  padding: 14px 20px;
+  min-width: 125px;
+
   text-align: center;
-  min-width: 120px;
+  transition: all .25s ease;
+}
+
+.price-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107,79,63,.08);
 }
 
 .price-label {
   display: block;
-  font-size: .85rem;
-  color: #777;
+  font-size: .82rem;
+  font-weight: 600;
+  color: rgba(107,79,63,.75);
+  margin-bottom: 4px;
 }
 
 .price-value {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #6B4F3F;
 }
