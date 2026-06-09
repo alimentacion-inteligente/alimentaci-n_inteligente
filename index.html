@@ -992,5 +992,47 @@ document.querySelectorAll('.accordion-btn').forEach(btn => {
 });
 </script>
 
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    // Cierra FAQ y Políticas
+    document.querySelectorAll('.compact-accordion').forEach(item => {
+      item.removeAttribute('open');
+    });
+
+  });
+
+});
+
+document.querySelectorAll('.compact-accordion').forEach(item => {
+
+  item.addEventListener('toggle', () => {
+
+    if (item.open) {
+
+      // Cierra todos los paquetes
+      document.querySelectorAll('.accordion-content').forEach(content => {
+        content.classList.remove('active');
+      });
+
+      document.querySelectorAll('.accordion-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.querySelector('span').textContent = '+';
+      });
+
+      // Cierra el otro FAQ si está abierto
+      document.querySelectorAll('.compact-accordion').forEach(other => {
+        if (other !== item) {
+          other.removeAttribute('open');
+        }
+      });
+
+    }
+
+  });
+
+});
+
 </body>
 </html>
