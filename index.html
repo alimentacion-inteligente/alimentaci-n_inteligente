@@ -151,9 +151,33 @@
       transition: .25s;
     }
 
-    .accordion-btn:hover {
-      background: #f2eeea;
-    }
+    .accordion-btn {
+  width: 100%;
+  background: #f9f7f4;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #6B4F3F;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+}
+
+.accordion-btn:hover,
+.accordion-btn.active {
+  background: #f2eeea;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(107,79,63,.10);
+}
 
     .accordion-btn span {
       font-size: 1.15rem;
@@ -187,6 +211,35 @@
       color: #6B4F3F;
       margin-top: 20px;
     }
+    
+    .price-options {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.price-box {
+  background: #f7f3ee;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.price-label {
+  display: block;
+  font-size: .85rem;
+  color: #777;
+}
+
+.price-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6B4F3F;
+}
 
     /* ==========================
        TESTIMONIOS
@@ -530,12 +583,17 @@
     <li>Análisis de composición corporal con InBody (solo presencial).</li>
   </ul>
 
-  <p><strong>Modalidades:</strong></p>
+<div class="price-options">
 
-  <ul>
-   <p class="package-price">Virtual: $500 mxn</p>
-   <p class="package-price">Presencial: $650 mxn</p>
-  </ul>
+  <div class="price-box">
+    <span class="price-label">Virtual</span>
+    <span class="price-value">$500</span>
+  </div>
+
+  <div class="price-box">
+    <span class="price-label">Presencial</span>
+    <span class="price-value">$650</span>
+  </div>
 
 </div>
 
@@ -571,14 +629,17 @@
     <li>Análisis de composición corporal con InBody (solo presencial).</li>
   </ul>
 
-  <p><strong>Modalidades:</strong></p>
+ <div class="price-options">
 
-  <ul>
-    <p class="package-price">Virtual: $550 mxn</p>
-    <p class="package-price">Presencial: $700 mxn</p>
-    <!-- li>💻 Virtual: $500 MXN</li>
-    <li>📍 Presencial: $650 MXN</li> -->
-  </ul>
+  <div class="price-box">
+    <span class="price-label">Virtual</span>
+    <span class="price-value">$550</span>
+  </div>
+
+  <div class="price-box">
+    <span class="price-label">Presencial</span>
+    <span class="price-value">$700</span>
+  </div>
 
 </div>
 
@@ -808,15 +869,32 @@ observer.observe(quote);
 
 <script>
 document.querySelectorAll('.accordion-btn').forEach(btn => {
+
   btn.addEventListener('click', () => {
+
     const content = btn.nextElementSibling;
 
-    document.querySelectorAll('.accordion-content').forEach(c => {
-      if (c !== content) c.classList.remove('active');
+    document.querySelectorAll('.accordion-btn').forEach(otherBtn => {
+      if(otherBtn !== btn){
+        otherBtn.classList.remove('active');
+        otherBtn.querySelector('span').textContent = '+';
+      }
+    });
+
+    document.querySelectorAll('.accordion-content').forEach(otherContent => {
+      if(otherContent !== content){
+        otherContent.classList.remove('active');
+      }
     });
 
     content.classList.toggle('active');
+    btn.classList.toggle('active');
+
+    btn.querySelector('span').textContent =
+      content.classList.contains('active') ? '−' : '+';
+
   });
+
 });
 </script>
 
