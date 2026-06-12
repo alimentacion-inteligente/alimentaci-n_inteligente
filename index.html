@@ -65,11 +65,26 @@
        HERO
     ========================== */
 
-    .hero {
-      margin-bottom: 50px;
-      text-align: center;
-      padding-top: 10px;
-    }
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-typing {
+  max-width: 600px;
+  margin: 0 auto 18px;
+
+  font-size: 1.05rem;
+  line-height: 1.6;
+
+  color: #8A8178;
+  font-style: italic;
+}
+
+.hero-accent {
+  font-family: 'Fraunces', serif;
+  color: #7DAA92;
+}
 
     /* ==========================
        FOTO PERFIL
@@ -443,27 +458,27 @@
 
     /* ==========================
        FRASE FINAL
-    ========================== */
+    ========================== 
 
-    .quote {
-      max-width: 520px;
-      margin: 50px auto 24px;
-      text-align: center;
-      font-style: italic;
-      color: #5A5A5A;
-      font-size: .95rem;
-      line-height: 1.6;
-    }
+    .quote { 
+      max-width: 520px; 
+      margin: 50px auto 24px; 
+      text-align: center; 
+      font-style: italic; 
+      color: #5A5A5A; 
+      font-size: .95rem; 
+      line-height: 1.6; 
+    } 
 
-    .quote span {
-      display: inline;
-      opacity: 0;
-      transition: opacity .4s ease;
-    }
+    .quote span { 
+      display: inline; 
+      opacity: 0; 
+      transition: opacity .4s ease; 
+    } 
 
-    .quote span.show {
-      opacity: 1;
-    }
+    .quote span.show { 
+      opacity: 1; 
+    }*/
 
     /* ==========================
        BOTONES
@@ -616,13 +631,15 @@
 <body>
   <div class="container">
 
-  <p class="quote type-words">
-    Sin culpa y sin modas, que tu dieta se base en una
-  </p
-  <!-- HERO -->
-  <section class="hero fade-up">
-    <h1>Alimentación Inteligente</h1>
-  </section>
+<section class="hero fade-up">
+
+  <p class="hero-typing" id="heroTyping"></p>
+
+  <h1>
+    Alimentación <span class="hero-accent">Inteligente</span>
+  </h1>
+
+</section>
 
 
   <!-- FOTO + QUIÉN SOY -->
@@ -1088,6 +1105,35 @@ document.querySelectorAll('.compact-accordion').forEach(item => {
   });
 
 });
+
+</script>
+
+
+<script>
+
+const heroText =
+"Sin culpa y sin modas, que tu alimentación se base en una";
+
+const heroElement =
+document.getElementById("heroTyping");
+
+let i = 0;
+
+function typeHero() {
+
+  if (i < heroText.length) {
+
+    heroElement.innerHTML += heroText.charAt(i);
+
+    i++;
+
+    setTimeout(typeHero, 35);
+
+  }
+
+}
+
+window.addEventListener("load", typeHero);
 
 </script>
 
