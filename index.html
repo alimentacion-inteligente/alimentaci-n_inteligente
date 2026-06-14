@@ -399,7 +399,7 @@
 .consultorio-text {
   text-align: center;
   max-width: 800px;
-  margin: 90 auto 20px;
+  margin: 90px auto 20px;
   color: #5A5A5A;
 }
 
@@ -418,17 +418,19 @@
 .consultorio-carousel::-webkit-scrollbar {
   display: none;
 }
+    .consultorio-carousel {
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .consultorio-carousel img {
   width: 280px;
-  height: 210px;
+  aspect-ratio: 9 / 16;
 
   object-fit: cover;
 
   border-radius: 12px;
-
   flex-shrink: 0;
-
   scroll-snap-align: center;
 
   box-shadow: 0 4px 14px rgba(0,0,0,.08);
