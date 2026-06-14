@@ -300,26 +300,42 @@
 }
 /* imagenes kit acompañamiento */
 
-    .kit-label {
-  margin-top: 16px;
+.kit-label {
+  margin-top: 14px;
   font-size: 0.85rem;
   color: #777;
 }
-    .kit-preview {
+    .kit-note {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #8A8A8A;
+  font-style: italic;
+}
+      
+}.kit-preview {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   margin-top: 14px;
 
-  opacity: 0.85; /* clave para hacerlo discreto */
+  overflow-x: auto;
+  padding-bottom: 6px;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  opacity: 0.9;
 }
 
 .kit-preview img {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 160px; /* mantiene proporción vertical */
 
   object-fit: cover;
 
   border-radius: 10px;
+
+  flex-shrink: 0;
+  scroll-snap-align: center;
 
   border: 1px solid rgba(0,0,0,.08);
 
@@ -912,11 +928,13 @@ line-height: 1;
 
   <p class="kit-label">Incluye kit de acompañamiento:</p>
   <div class="kit-preview">
-  <img src="img/kit1.jpg" alt="Kit de acompañamiento 1">
-  <img src="img/kit2.jpg" alt="Kit de acompañamiento 2">
-  <img src="img/kit3.jpg" alt="Kit de acompañamiento 3">
+  <img src="img/kit1.jpeg" alt="Kit de acompañamiento 1">
+  <img src="img/kit2.jpeg" alt="Kit de acompañamiento 2">
+  <img src="img/kit3.jpeg" alt="Kit de acompañamiento 3">
 </div>
-
+<p class="kit-note">
+  El kit de acompañamiento puede variar ligeramente según disponibilidad de materiales.
+</p>
   <!-- p class="package-note">
     Recomendado para quienes desean un seguimiento más frecuente y mayor acompañamiento durante el proceso.
   </p> -->
