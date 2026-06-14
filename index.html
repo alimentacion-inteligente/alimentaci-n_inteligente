@@ -35,7 +35,7 @@
     }
 
     h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Nunito', serif;
   font-size: 2.3rem;
   font-weight: 350;
 
@@ -297,6 +297,40 @@
   color: #7DAA92;
   margin-top: 18px;
   margin-bottom: 6px;
+}
+/* imagenes kit acompañamiento */
+
+    .kit-label {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #777;
+}
+    .kit-preview {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+
+  opacity: 0.85; /* clave para hacerlo discreto */
+}
+
+.kit-preview img {
+  width: 70px;
+  height: 70px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(0,0,0,.08);
+
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.kit-preview img:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 /* PRECIO PAQUETE */
@@ -718,9 +752,10 @@ line-height: 1;
   <h2>Conoce tu nuevo lugar seguro</h2>
   
 
-  <!-- <p class="consultorio-text">
-    Un espacio pensado para que te sientas cómoda, escuchada y acompañada durante tu proceso.
-  </p> -->
+ <p>
+    Un espacio cómodo y tranquilo donde realizamos la evaluación nutricional,
+    análisis de composición corporal con InBody y seguimiento de tus objetivos.
+  </p>
 
   <div class="consultorio-carousel">
 
@@ -872,8 +907,15 @@ line-height: 1;
     <li>Atención por WhatsApp durante 1 mes.</li>
     <li>Acceso a la app de seguimiento por 1 mes.</li>
     <li>Recomendaciones personalizadas según diagnóstico y objetivos.</li>
-    <li>Kit de acompañamiento.</li>
+ 
   </ul>
+
+  <p class="kit-label">Incluye kit de acompañamiento:</p>
+  <div class="kit-preview">
+  <img src="img/kit1.jpg" alt="Kit de acompañamiento 1">
+  <img src="img/kit2.jpg" alt="Kit de acompañamiento 2">
+  <img src="img/kit3.jpg" alt="Kit de acompañamiento 3">
+</div>
 
   <!-- p class="package-note">
     Recomendado para quienes desean un seguimiento más frecuente y mayor acompañamiento durante el proceso.
@@ -914,7 +956,7 @@ line-height: 1;
 
     <p>
       Reserva tu cita con anticipación.
-      Tu espacio se confirma una vez realizado un anticipo de $150 mxn.
+      Tu espacio se confirma una vez realizado un anticipo.
     </p>
 
     <div style="text-align:center; margin-top:20px;">
@@ -994,12 +1036,12 @@ line-height: 1;
 
       <p>
         <strong>¿Cómo me entregas mi plan?</strong><br>
-        El plan de alimentación y material extra se entrega por el medio de comunicación que elijas como PDF y se carga en la App de seguimiento..
+        El plan de alimentación y material se entrega por el medio de comunicación que elijas, tanto en como PDF como en la App de seguimiento.
       </p>
 
       <p>
         <strong>¿Hay un horario para recibir atención por WhatsApp?</strong><br>
-        El horario de atención es de lunes a sábado. Si existe algún cambio por motivos extraordinarios, te lo haré saber con anticipación.
+        El horario de atención es de lunes a sábado de 9:00 am a 9:00 pm. Si existe algún cambio por motivos extraordinarios, te lo haré saber con anticipación.
       </p>
 
     </div>
