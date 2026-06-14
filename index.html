@@ -390,6 +390,57 @@
       margin-top: 10px;
       text-align: right;
     }
+    
+    
+    /* ==========================
+   CONSULTORIO
+========================== */
+
+.consultorio-text {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #5A5A5A;
+}
+
+.consultorio-carousel {
+  display: flex;
+  gap: 14px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  padding-bottom: 8px;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.consultorio-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.consultorio-carousel img {
+  width: 280px;
+  height: 210px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  flex-shrink: 0;
+
+  scroll-snap-align: center;
+
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+
+.consultorio-info {
+  text-align: center;
+  margin-top: 18px;
+
+  font-size: .9rem;
+  color: #8A8178;
+}
 
     /* ==========================
        FAQ & POLÍTICAS
@@ -658,6 +709,29 @@ line-height: 1;
     </ul>
     <h2>Si te identificas con alguna, este lugar es para ti🤍.</h2>
   </section>
+
+<!-- CONSULTORIO -->
+<section class="card fade-up">
+
+  <h2>Conoce tu nuevo lugar seguro 🤍</h2>
+
+  <p class="consultorio-text">
+    Un espacio pensado para que te sientas cómoda, escuchada y acompañada durante tu proceso.
+  </p>
+
+  <div class="consultorio-carousel">
+
+    <img src="consultorio1.jpg" alt="Consultorio">
+    <img src="consultorio2.jpg" alt="Consultorio">
+    <img src="consultorio3.jpg" alt="Consultorio">
+
+  </div>
+
+  <p class="consultorio-info">
+    📍 Monterrey, Nuevo León · Atención sólo con cita 
+  </p>
+
+</section>
 
   <!-- SERVICIOS Y PAQUETES (ANTES DEL CTA) -->
   <section class="card fade-up">
