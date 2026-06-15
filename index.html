@@ -45,19 +45,29 @@
   color: #6B4F3F;
 }
 
-.hero h1 {
-  overflow: hidden;
-  white-space: nowrap;
-
-  width: 0;
-
-  animation:
-    typing 1.8s steps(25,end) forwards;
+.hero h1,
+.hero h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: titleFade 1s ease forwards;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+.hero h2 {
+  animation-delay: .25s;
+}
+
+@keyframes titleFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
 
     h2 {
